@@ -1,69 +1,167 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import SystemsIntro from "@/components/SystemsIntro";
+import ScrollFrameAnimation from "@/components/ScrollFrameAnimation";
+import FeatureTextBlock from "@/components/FeatureTextBlock";
+import TradesBand from "@/components/TradesBand";
+import ProcessSteps from "@/components/ProcessSteps";
+import WhyChoose from "@/components/WhyChoose";
+import Partners from "@/components/Partners";
+import Testimonials from "@/components/Testimonials";
+import Faq from "@/components/Faq";
+import FinalCta from "@/components/FinalCta";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="oak-layout">
+      <Navbar />
+      <Hero />
+      <SystemsIntro />
+
+      <section className="mx-auto max-w-[1120px] px-6 py-12 md:px-10 md:py-14">
+        <ScrollFrameAnimation
+          frameCount={4}
+          basePath=""
+          frameSources={[
+            "/assets/syntidesk/interactions-review.jpg",
+            "/assets/syntidesk/appointments.jpg",
+            "/assets/syntidesk/work-queue.jpg",
+            "/assets/syntidesk/overview-poster.jpg",
+          ]}
+        >
+          <FeatureTextBlock
+            heading="Workflow Automation"
+            description="Reduce repetitive work and keep routine processes moving across intake, approvals, routing, notifications, and follow-up."
+            items={[
+              {
+                title: "Simplify routine work",
+                desc: "Remove unnecessary steps and clarify what should happen next.",
+              },
+              {
+                title: "Keep work moving",
+                desc: "Automate intake, approvals, notifications, follow-up, and status changes.",
+              },
+              {
+                title: "Reduce manual coordination",
+                desc: "Replace repeated entry, status checking, reminders, and routing handled by hand.",
+              },
+              {
+                title: "Build around the real process",
+                desc: "Use automation where it helps and keep people involved where judgment matters.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="Microsoft Business Solutions"
+            description="Make the Microsoft tools your business already owns work together better."
+            items={[
+              {
+                title: "SharePoint and Microsoft 365",
+                desc: "Modernize document management, permissions, internal processes, and legacy workflows.",
+              },
+              {
+                title: "Power Automate and Power Apps",
+                desc: "Add practical structure to workflows and internal operating experiences.",
+              },
+              {
+                title: "Teams, forms, lists, and documents",
+                desc: "Connect the tools that otherwise operate separately.",
+              },
+              {
+                title: "Modernize with purpose",
+                desc: "Improve what already works instead of replacing systems unnecessarily.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="AI & Customer Operations"
+            description="Use AI for routine customer work while keeping people involved where judgment matters."
+            items={[
+              {
+                title: "SyntiDesk",
+                desc: "A self-contained AI front desk for calls, leads, appointments, and follow-up.",
+              },
+              {
+                title: "Customer intake and routing",
+                desc: "Qualify requests, capture details, and move work to the right person.",
+              },
+              {
+                title: "Scheduling and follow-up",
+                desc: "Reduce manual back-and-forth while keeping customer communication moving.",
+              },
+              {
+                title: "Human escalation",
+                desc: "Keep people involved for exceptions and decisions that need judgment.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="Custom Business Systems"
+            description="Build around the process when existing software no longer fits the way work needs to happen."
+            items={[
+              {
+                title: "Purpose-built applications",
+                desc: "Create internal applications, portals, workflow systems, dashboards, and specialized business software.",
+              },
+              {
+                title: "One operating experience",
+                desc: "Replace spreadsheets, email, and workarounds with a system that fits the process.",
+              },
+              {
+                title: "Operational visibility",
+                desc: "Give teams clear status, ownership, history, and next-step visibility.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="Integrations"
+            description="Connect the systems your business already depends on so information moves without manual coordination."
+            items={[
+              {
+                title: "Connected business systems",
+                desc: "Bring Microsoft 365, CRM, accounting, project, ecommerce, communication, and custom systems together.",
+              },
+              {
+                title: "Less copying, more clarity",
+                desc: "Keep records aligned and make status changes visible without repeated exports or re-entry.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="Human Expert Implementation"
+            description="Real delivery and support from AI engineers, Microsoft 365 experts, developers, designers, and automation specialists."
+            items={[
+              {
+                title: "Review",
+                desc: "Understand users, workflow, systems, data, ownership, bottlenecks, and exceptions.",
+              },
+              {
+                title: "Build / Connect",
+                desc: "Implement the right combination of automation, Microsoft tools, integrations, AI, or custom systems.",
+              },
+              {
+                title: "Support",
+                desc: "Test, document, train, monitor, and improve the system over time.",
+              },
+            ]}
+          />
+        </ScrollFrameAnimation>
+      </section>
+
+      <TradesBand />
+      <ProcessSteps />
+      <WhyChoose />
+      <Partners />
+      <Testimonials />
+      <Faq />
+      <FinalCta />
+      <Footer />
     </div>
   );
 }
