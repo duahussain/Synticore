@@ -19,7 +19,7 @@ export default function Home() {
       <Hero />
       <SystemsIntro />
 
-      <section className="mx-auto max-w-[1120px] px-6 py-12 md:px-10 md:py-14">
+      <section className="mx-auto max-w-[1280px] px-6 py-12 md:px-10 md:py-14">
         <ScrollFrameAnimation
           frameSources={[
             "/assets/syntidesk/interactions-review.jpg",

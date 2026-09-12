@@ -18,14 +18,14 @@ export default function ScrollFrameAnimation({
         return (
           <div key={i} className="flex flex-col items-center gap-8 md:flex-row md:items-center md:gap-16">
             {src && (
-              <div className={`w-full shrink-0 md:w-[420px] ${imageFirst ? "md:order-1" : "md:order-2"}`}>
+              <div className={`w-full shrink-0 md:w-[620px] ${imageFirst ? "md:order-1" : "md:order-2"}`}>
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[24px] bg-[#EEF1F7] shadow-[0_24px_60px_rgba(16,24,50,0.12)] ring-1 ring-black/5">
                   <Image
                     src={src}
                     alt=""
                     fill
                     className="object-cover"
-                    sizes="(min-width: 768px) 420px, 90vw"
+                    sizes="(min-width: 768px) 620px, 90vw"
                   />
                 </div>
               </div>
