@@ -21,8 +21,6 @@ export default function Home() {
 
       <section className="mx-auto max-w-[1120px] px-6 py-12 md:px-10 md:py-14">
         <ScrollFrameAnimation
-          frameCount={4}
-          basePath=""
           frameSources={[
             "/assets/syntidesk/interactions-review.jpg",
             "/assets/syntidesk/appointments.jpg",

@@ -41,7 +41,7 @@ export default function Footer() {
             alt="SyntiDesk"
             width={160}
             height={36}
-            className="h-8 w-auto brightness-0 invert"
+            className="h-8 w-auto"
           />
           <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-white/60">
             Business systems for practical operational improvement across workflow automation,

@@ -35,25 +35,41 @@ h4 {
   font-family: var(--font-heading), var(--font-sans), sans-serif;
 }
 
+/* Hero: Hero.tsx already handles the full-bleed photo, gradient overlay, and
+   responsive typography via Tailwind utility classes. This just frames it as a
+   rounded card consistent with the rest of the page. */
+.oak-layout-hero {
+  width: min(1280px, calc(100% - 48px));
+  margin: 32px auto 0;
+  border-radius: 28px;
+}
+@media (max-width: 767px) {
+  .oak-layout-hero {
+    width: calc(100% - 24px);
+    margin-top: 16px;
+    border-radius: 20px;
+  }
+}
+
 /* Presentation-only redesign; content and interactions remain in their components. */
 .oak-layout { background: #f8f9fc; }
 .oak-layout .oak-nav { top: 16px; max-width: 1280px; }
 .oak-layout .oak-nav nav { border-radius: 12px; box-shadow: 0 8px 28px #10183208; }
 .oak-layout .oak-nav nav > a img { max-height: 38px; }
 .oak-layout h1, .oak-layout h2, .oak-layout h3 { letter-spacing: -.045em; }
-.oak-layout .oak-layout-hero { width: min(1280px, calc(100% - 64px)); margin: 48px auto 0; padding: 40px 0 64px; background: transparent; overflow: visible; display: grid; grid-template-columns: 1.1fr 1fr; gap: 52px; align-items: stretch; }
-.oak-layout-hero > div:first-child { position: relative; inset: auto; grid-column: 2; grid-row: 1; min-height: 600px; overflow: hidden; border-radius: 18px; box-shadow: 0 20px 60px #14245012; }
-.oak-layout-hero > div:first-child img { object-position: 74% center; }
-.oak-layout-hero > div:first-child > div { background: linear-gradient(180deg, transparent 65%, #10183230); }
-.oak-layout-hero > div:nth-child(2) { grid-column: 1; grid-row: 1; min-height: 0; padding: 20px 0; align-self: center; }
-.oak-layout-hero h1 { font-size: clamp(38px, 4.2vw, 61px); line-height: 1.08; font-weight: 700; }
-.oak-layout-hero h1 em { color: #0b55ff; }
-.oak-layout-hero p { font-weight: 500; line-height: 1.75; margin-top: 24px; }
-.oak-layout-hero li > span:last-child { font-size: 14px; font-weight: 500; line-height: 1.6; }
-.oak-layout-hero a { border-radius: 8px; font-size: 15px; box-shadow: none; }
-.oak-layout-hero > div:nth-child(2) > div > div:last-child { gap: 22px; padding-top: 24px; border-top: 1px solid #dde3ed; }
-.oak-layout-hero > div:nth-child(2) > div > div:last-child img { width: 28px; height: 28px; }
-.oak-layout-hero > div:nth-child(2) > div > div:last-child div > div { font-size: 12px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .oak-layout .oak-layout-intro { max-width: 1280px; border-top: 1px solid #dfe4ef; padding-top: 66px; padding-bottom: 24px; }
 .oak-layout-intro > p { letter-spacing: .16em; font-size: 11px; }
 .oak-layout-intro h2 { font-weight: 600; line-height: 1.2; font-size: clamp(28px, 3vw, 43px); }
@@ -77,13 +93,13 @@ h4 {
 .oak-layout-faq button { font-size: 16px; font-weight: 600; padding: 20px; }
 .oak-layout-faq button[aria-expanded="true"] { background: #0b55ff; }
 .oak-layout footer { margin-top: 30px; }
-@media (max-width: 1050px) { .oak-layout .oak-layout-hero { gap: 32px; } .oak-layout-hero > div:first-child { min-height: 580px; } .oak-layout .oak-layout-feature { padding: 24px; } }
+@media (max-width: 1050px) {   .oak-layout .oak-layout-feature { padding: 24px; } }
 @media (max-width: 767px) {
- .oak-layout .oak-layout-hero { grid-template-columns: 1fr; width: calc(100% - 40px); margin-top: 30px; padding-top: 10px; gap: 30px; }
- .oak-layout-hero > div:first-child { grid-column: 1; grid-row: 2; min-height: 390px; }
- .oak-layout-hero > div:nth-child(2) { grid-column: 1; grid-row: 1; padding: 0; }
- .oak-layout-hero h1 { font-size: clamp(36px, 7vw, 52px); }
- .oak-layout-hero > div:nth-child(2) > div > div:last-child { gap: 18px; }
+ 
+ 
+ 
+ 
+ 
  .oak-layout .oak-layout-intro { padding-top: 45px; }
  .oak-layout .oak-layout-process { padding-block: 60px; }
  .oak-layout .oak-layout-faq { grid-template-columns: 1fr; gap: 28px; padding-block: 60px; }
@@ -92,11 +108,11 @@ h4 {
 
 /* Reference-aligned refinement across the complete homepage. */
 .oak-layout { background: #fff; }
-.oak-layout .oak-layout-hero { padding: 28px 32px 36px; margin-top: 36px; border-radius: 24px; background: linear-gradient(115deg, #eef4ff, #f8faff 62%); gap: 44px; }
-.oak-layout-hero > div:first-child { min-height: 560px; box-shadow: none; }
-.oak-layout-hero h1 em { color: #7c35ed; }
-.oak-layout-hero > div:nth-child(2) { padding: 12px 0; }
-.oak-layout-hero > div:nth-child(2) > div > div:last-child { margin-top: 26px; }
+
+
+
+
+
 .oak-layout .oak-layout-intro { margin-top: 70px; border: 0; padding-top: 0; padding-bottom: 32px; }
 .oak-layout .oak-layout-feature { background: #f8faff; border-color: #e7edf7; padding: 32px; border-radius: 18px; }
 .oak-layout .oak-layout-trades { width: min(1280px, calc(100% - 64px)); margin: 55px auto 0; border-radius: 24px; clip-path: none !important; padding: 64px 12px; }
@@ -133,7 +149,7 @@ h4 {
 .oak-layout-cta > div > div:last-child { aspect-ratio: 1; border: 1px solid #ffffff1a; border-radius: 50%; max-width: 240px; width: 100%; justify-self: center; background: #ffffff06; }
 .oak-layout-cta a { border-radius: 8px; }
 @media (max-width: 1000px) {
- .oak-layout .oak-layout-hero { padding-inline: 24px; gap: 28px; }
+ 
  .oak-layout .oak-layout-why { grid-template-columns: 1fr; gap: 32px; }
  .oak-layout-why > h2 { position: static; text-align: center; }
  .oak-layout-partners > div { grid-template-columns: 1fr; gap: 36px; }
@@ -141,8 +157,8 @@ h4 {
  .oak-layout-cta > div { padding: 40px; gap: 35px; }
 }
 @media (max-width: 767px) {
- .oak-layout .oak-layout-hero { width: calc(100% - 28px); padding: 26px 20px; border-radius: 18px; margin-top: 30px; }
- .oak-layout-hero > div:first-child { min-height: 330px; border-radius: 12px; }
+ 
+ 
  .oak-layout .oak-layout-intro { margin-top: 48px; }
  .oak-layout .oak-layout-trades { width: calc(100% - 28px); padding: 42px 0; border-radius: 18px; }
  .oak-layout-trades article > div { height: 170px; }
@@ -304,7 +320,7 @@ body { background: #f8f9fc; }
 .oak-layout { background: linear-gradient(180deg, #fbfcff 0%, #f6f8fd 44%, #ffffff 100%); }
 .oak-layout .oak-nav nav,
 .oak-site .oak-nav nav { border-color: #e7ebf3; background: rgba(255, 255, 255, .94); }
-.oak-layout .oak-layout-hero { background: radial-gradient(circle at 85% 15%, rgba(128, 72, 237, .11), transparent 26%), linear-gradient(120deg, #eef4ff, #fbfcff 60%); }
+
 .oak-layout .oak-layout-feature { background: linear-gradient(145deg, #ffffff, #f6f8ff); border-color: #dfe6f3; box-shadow: 0 14px 36px rgba(22, 41, 83, .055); }
 .oak-layout .oak-layout-feature:hover { border-color: #bdccf7; box-shadow: 0 18px 45px rgba(42, 79, 165, .1); }
 .oak-layout .oak-layout-process > div > div { background: #fff; border-color: #e2e8f4; }
@@ -323,9 +339,6 @@ body { background: #f8f9fc; }
   /* Keep the mobile experience still: no sticky bar, scroll-driven preview, or sliding galleries. */
   .oak-nav { position: relative !important; top: auto !important; }
   .oak-site *, .oak-layout * { transition: none !important; }
-  .systems-flow .systems-preview { display: none; }
-  .systems-flow > div:last-child { display: grid; gap: 16px; }
-  .systems-flow > div:last-child > div { min-height: auto !important; padding: 0 !important; }
   .oak-layout-trades [class*="snap-x"] { display: grid; grid-template-columns: 1fr; overflow: visible; scroll-snap-type: none; }
   .oak-layout-trades [class*="snap-x"] > div { width: auto !important; min-width: 0 !important; }
   .oak-layout-trades [class*="snap-x"] > div + div { margin-top: 12px; }
@@ -362,11 +375,9 @@ body,
 .oak-nav a, .oak-nav button { color: #252325 !important; }
 .oak-nav a[href="/book-a-call"] { color: #fff !important; background: #ec3cd4 !important; box-shadow: 0 10px 20px rgba(236, 60, 212, .23) !important; }
 
-.oak-layout .oak-layout-hero,
+
 .oak-site:not(.route-home) .oak-nav + section { background: radial-gradient(circle at 84% 12%, rgba(255, 214, 47, .7), transparent 24%), radial-gradient(circle at 10% 80%, rgba(18, 203, 224, .18), transparent 27%), #f6f4f0; }
-.oak-layout-hero h1 em,
-.oak-layout-hero h1 span,
-.oak-site em { color: #ec3cd4 !important; }
+
 .oak-layout .oak-layout-feature,
 .oak-layout .oak-layout-process > div > div,
 .oak-layout .oak-layout-why > div > div,
@@ -432,9 +443,8 @@ body, .oak-layout, .oak-site { background: #f7f8fa; color: #17243a; }
 .oak-nav a, .oak-nav button { color: #526074 !important; }
 .oak-nav a[href="/book-a-call"] { background: #2457d6 !important; box-shadow: 0 8px 18px rgba(36, 87, 214, .18) !important; }
 
-.oak-layout .oak-layout-hero,
+
 .oak-site:not(.route-home) .oak-nav + section { background: linear-gradient(135deg, #eef3fb, #fafbfd 62%, #f2f0fb); }
-.oak-layout-hero h1 em, .oak-layout-hero h1 span, .oak-site em { color: #6756c8 !important; }
 .oak-layout .oak-layout-feature,
 .oak-layout .oak-layout-process > div > div,
 .oak-layout .oak-layout-why > div > div,
@@ -488,11 +498,10 @@ body, .oak-layout, .oak-site { background: #f5f3ee; color: #29272b; }
 .oak-nav a, .oak-nav button { color: #47434a !important; }
 .oak-nav a[href="/book-a-call"] { background: #d538b4 !important; box-shadow: 0 8px 18px rgba(213, 56, 180, .17) !important; }
 
-.oak-layout .oak-layout-hero,
+
 .oak-site:not(.route-home) .oak-nav + section { background: radial-gradient(circle at 91% 15%, rgba(255, 209, 67, .42), transparent 23%), radial-gradient(circle at 3% 90%, rgba(33, 188, 208, .13), transparent 26%), #f5f3ee; }
-.oak-layout .oak-layout-hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .22; background-image: linear-gradient(rgba(213,56,180,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(213,56,180,.14) 1px, transparent 1px); background-size: 28px 28px; mask-image: linear-gradient(90deg, transparent 42%, black 83%, transparent); }
-.oak-layout-hero > div { z-index: 1; }
-.oak-layout-hero h1 em, .oak-layout-hero h1 span, .oak-site em { color: #d538b4 !important; }
+
+
 
 .oak-layout .oak-layout-feature,
 .oak-layout .oak-layout-process > div > div,
@@ -524,26 +533,11 @@ body, .oak-layout, .oak-site { background: #f5f3ee; color: #29272b; }
 .pricing-page > section:nth-of-type(2) > div:last-child { background: linear-gradient(135deg, #29272b, #3c2b3e); }
 .pricing-page > section:first-of-type > div > div:nth-of-type(3) { background: #fffefa; border-color: #e3ded7; }
 
-@media (max-width: 767px) {
-  .oak-layout .oak-layout-hero::after { background-size: 20px 20px; opacity: .14; }
-}
+
 
 /* Hero background only: a quiet editorial wash behind the existing content. */
-.oak-layout .oak-layout-hero {
-  background:
-    radial-gradient(ellipse 62% 76% at -8% 104%, rgba(35, 188, 208, .18), transparent 62%),
-    radial-gradient(ellipse 32% 54% at 57% -12%, rgba(213, 56, 180, .12), transparent 67%),
-    radial-gradient(circle at 83% 12%, rgba(255, 208, 70, .22), transparent 22%),
-    linear-gradient(128deg, #fcfbf8 0%, #f8f5f3 56%, #f4f0f5 100%);
-}
-.oak-layout .oak-layout-hero::after {
-  opacity: .16;
-  background-image:
-    linear-gradient(rgba(213, 56, 180, .11) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(213, 56, 180, .11) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: linear-gradient(90deg, transparent 46%, black 72%, transparent 100%);
-}
+
+
 
 /* Unified color finish: warm editorial surfaces with confident, legible actions. */
 :root {
@@ -566,7 +560,7 @@ body,
   box-shadow: 0 10px 28px rgba(37, 35, 42, .07);
 }
 
-.oak-layout .oak-layout-hero,
+
 .oak-site:not(.route-home) .oak-nav + section {
   background:
     radial-gradient(circle at 90% 8%, rgba(247, 196, 73, .26), transparent 22%),
@@ -592,12 +586,10 @@ body,
   box-shadow: 0 14px 34px rgba(140, 42, 120, .09);
 }
 
-.oak-layout-feature li > span:first-child,
-.oak-layout-hero li > span:first-child {
+.oak-layout-feature li > span:first-child{
   background: rgba(201, 52, 170, .11) !important;
 }
-.oak-layout-feature li > span:first-child svg,
-.oak-layout-hero li > span:first-child svg { color: #c934aa !important; }
+.oak-layout-feature li > span:first-child svg{ color: #c934aa !important; }
 
 .oak-nav a[href="/book-a-call"],
 .oak-layout a[href="/book-a-call"],
@@ -662,20 +654,14 @@ body,
 }
 .oak-nav a, .oak-nav button { color: #563c35 !important; }
 
-.oak-layout .oak-layout-hero,
+
 .oak-site:not(.route-home) .oak-nav + section {
   background:
     radial-gradient(ellipse 54% 72% at 108% 5%, rgba(169, 103, 53, .16), transparent 62%),
     radial-gradient(ellipse 55% 80% at -12% 108%, rgba(122, 33, 26, .10), transparent 58%),
     linear-gradient(130deg, #fffaf4, #f4e9df 100%);
 }
-.oak-layout .oak-layout-hero::after {
-  opacity: .12;
-  background-image:
-    linear-gradient(rgba(122, 33, 26, .13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(122, 33, 26, .13) 1px, transparent 1px);
-}
-.oak-layout-hero h1 em, .oak-layout-hero h1 span, .oak-site em { color: #8c2f27 !important; }
+
 
 .oak-layout .oak-layout-feature,
 .oak-layout .oak-layout-process > div > div,
@@ -691,10 +677,8 @@ body,
 }
 .oak-layout .oak-layout-feature:hover { border-color: #bb8d7e; box-shadow: 0 13px 30px rgba(83, 30, 22, .09); }
 
-.oak-layout-feature li > span:first-child,
-.oak-layout-hero li > span:first-child { background: rgba(122, 33, 26, .10) !important; }
-.oak-layout-feature li > span:first-child svg,
-.oak-layout-hero li > span:first-child svg { color: #8c2f27 !important; }
+.oak-layout-feature li > span:first-child{ background: rgba(122, 33, 26, .10) !important; }
+.oak-layout-feature li > span:first-child svg{ color: #8c2f27 !important; }
 
 .oak-nav a[href="/book-a-call"],
 .oak-layout a[href="/book-a-call"],
@@ -752,16 +736,15 @@ body,
 }
 .oak-nav a, .oak-nav button { color: #e7ddd6 !important; }
 
-.oak-layout .oak-layout-hero,
+
 .oak-site:not(.route-home) .oak-nav + section {
   background:
     radial-gradient(circle at 92% 8%, rgba(185, 66, 55, .22), transparent 25%),
     radial-gradient(ellipse 54% 90% at -8% 110%, rgba(120, 36, 29, .22), transparent 62%),
     linear-gradient(128deg, #1d1818, #110e0f 100%);
 }
-.oak-layout .oak-layout-hero::after { opacity: .09; }
-.oak-layout-hero h1 em, .oak-layout-hero h1 span, .oak-site em { color: #dc7468 !important; }
-.oak-layout-hero p,
+
+
 .oak-layout-feature > p,
 .oak-layout-feature li > div > div:last-child,
 .oak-layout-why p,
@@ -939,12 +922,12 @@ a[href="/book-a-call"]:hover { background: linear-gradient(135deg, #a63b32, #762
 .who-fit .rounded-md { background: rgba(243, 160, 150, .18) !important; color: #fffaf5 !important; }
 
 /* Hero proof and checklist contrast on the dark home page. */
-.hero-checklist li > span:last-child { color: #eee2da !important; }
-.hero-checklist li > span:first-child { background: rgba(195, 77, 65, .16) !important; }
-.hero-checklist li > span:first-child svg { color: #ef8376 !important; }
-.hero-ratings { border-top-color: #514440 !important; }
-.rating-badge > div > div:first-child { color: #fffaf5 !important; }
-.rating-badge > div > div:last-child { color: #ffc24b !important; }
+
+
+
+
+
+
 .about-process-link { color: #f0a196 !important; }
 .about-process-link:hover { color: #fffaf5 !important; }
 
@@ -970,7 +953,7 @@ html[data-theme="light"] .oak-layout p, html[data-theme="light"] .oak-site p,
 html[data-theme="light"] .oak-layout li, html[data-theme="light"] .oak-site li { color: #725e57 !important; }
 html[data-theme="light"] .oak-layout .oak-nav nav, html[data-theme="light"] .oak-site .oak-nav nav { background: rgba(255,251,247,.96); border-color: #dfd1c4; box-shadow: 0 8px 24px rgba(48,24,18,.07); }
 html[data-theme="light"] .oak-nav a, html[data-theme="light"] .oak-nav button { color: #563c35 !important; }
-html[data-theme="light"] .oak-layout .oak-layout-hero, html[data-theme="light"] .oak-site:not(.route-home) .oak-nav + section { background: linear-gradient(130deg,#fffaf4,#f4e9df); }
+ html[data-theme="light"] .oak-site:not(.route-home) .oak-nav + section { background: linear-gradient(130deg,#fffaf4,#f4e9df); }
 html[data-theme="light"] .oak-layout .oak-layout-feature, html[data-theme="light"] .oak-layout .oak-layout-process > div > div, html[data-theme="light"] .oak-layout .oak-layout-why > div > div, html[data-theme="light"] .oak-layout .oak-layout-faq > div > div { background: #fdf8f2; border-color: #e2d2c5; box-shadow: 0 9px 27px rgba(48,24,18,.045); }
 html[data-theme="light"] .oak-layout .oak-layout-trades, html[data-theme="light"] .oak-layout .oak-layout-partners { background: #24120e; }
 html[data-theme="light"] .oak-layout .oak-layout-cta > div { background: linear-gradient(130deg,#24120e,#4a231c); }
@@ -984,20 +967,17 @@ html[data-theme="light"] { --background: #f5f1eb; --foreground: #38221d; --color
 html[data-theme="light"] body,
 html[data-theme="light"] .oak-layout,
 html[data-theme="light"] .oak-site { background: #f5f1eb; color: #38221d; }
-html[data-theme="light"] .oak-layout h1, html[data-theme="light"] .oak-layout h2, html[data-theme="light"] .oak-layout h3,
-html[data-theme="light"] .oak-site h1, html[data-theme="light"] .oak-site h2, html[data-theme="light"] .oak-site h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.055em; color: #3c2721 !important; }
 html[data-theme="light"] .oak-layout p, html[data-theme="light"] .oak-site p,
 html[data-theme="light"] .oak-layout li, html[data-theme="light"] .oak-site li { color: #76645e !important; }
 html[data-theme="light"] .oak-layout .oak-nav { top: 0; width: 100%; max-width: none; }
 html[data-theme="light"] .oak-layout .oak-nav nav, html[data-theme="light"] .oak-site .oak-nav nav { height: 64px; border: 0; border-radius: 0; background: #4b2822; box-shadow: none; padding-left: clamp(20px,4vw,56px); padding-right: clamp(20px,4vw,56px); }
 html[data-theme="light"] .oak-nav a, html[data-theme="light"] .oak-nav button { color: #f7f0e7 !important; }
 html[data-theme="light"] .oak-nav nav > a img { filter: brightness(0) invert(1); }
-html[data-theme="light"] .oak-layout .oak-layout-hero { width: min(1320px,calc(100% - 42px)); margin-top: 26px; padding: 0; gap: 0; border: 1px solid #d9cdc2; border-radius: 18px; background: #f9f7f2; overflow: hidden; }
-html[data-theme="light"] .oak-layout-hero > div:first-child { min-height: 590px; border-radius: 0; }
-html[data-theme="light"] .oak-layout-hero > div:first-child > div { background: linear-gradient(90deg,rgba(60,37,29,.32),transparent 70%); }
-html[data-theme="light"] .oak-layout-hero > div:nth-child(2) { padding: clamp(38px,6vw,86px) clamp(28px,5vw,72px); background: #f8f6f0; }
-html[data-theme="light"] .oak-layout-hero h1 { font-size: clamp(46px,5.3vw,76px); line-height: .9; text-transform: uppercase; }
-html[data-theme="light"] .oak-layout-hero h1 em, html[data-theme="light"] .oak-site em { color: #6d9aaf !important; }
+
+
+
+
+
 html[data-theme="light"] .oak-layout a[href="/book-a-call"], html[data-theme="light"] .oak-site a[href="/book-a-call"], html[data-theme="light"] .oak-nav a[href="/book-a-call"] { border-radius: 999px; background: #6f98aa !important; border-color: #6f98aa !important; box-shadow: none !important; }
 html[data-theme="light"] .oak-layout .oak-layout-intro { max-width: 900px; margin-top: 95px; text-align: center; }
 html[data-theme="light"] .oak-layout .oak-layout-intro h2 { font-size: clamp(40px,5vw,67px); }
@@ -1014,7 +994,7 @@ html[data-theme="light"] .oak-layout .oak-layout-proof > div:last-child { backgr
 html[data-theme="light"] .theme-toggle { border-color: #ffffff35; background: #ffffff18; }
 html[data-theme="light"] .theme-toggle button { color: #f7f0e7 !important; }
 html[data-theme="light"] .theme-toggle button.active { background: #f7f0e7; color: #4b2822 !important; }
-@media (max-width: 767px) { html[data-theme="light"] .oak-layout .oak-nav nav { height: 60px; } html[data-theme="light"] .oak-layout .oak-layout-hero { width: calc(100% - 24px); margin-top: 12px; } html[data-theme="light"] .oak-layout-hero > div:nth-child(2) { padding: 42px 24px; } html[data-theme="light"] .oak-layout-hero h1 { font-size: 44px; } }
+@media (max-width: 767px) { html[data-theme="light"] .oak-layout .oak-nav nav { height: 60px; }    }
 
 /* Light-mode clarity pass: no dark panels or low-contrast copy. */
 html[data-theme="light"] body,
@@ -1027,9 +1007,9 @@ html[data-theme="light"] .oak-site .oak-nav nav { background: #fffdfa !important
 html[data-theme="light"] .oak-nav a,
 html[data-theme="light"] .oak-nav button { color: #4a3029 !important; }
 html[data-theme="light"] .oak-nav nav > a img { filter: none; }
-html[data-theme="light"] .oak-layout .oak-layout-hero,
+
 html[data-theme="light"] .oak-site:not(.route-home) .oak-nav + section { background: #f8f5f0 !important; border-color: #e0d7cf !important; }
-html[data-theme="light"] .oak-layout-hero > div:nth-child(2),
+
 html[data-theme="light"] .oak-layout .oak-layout-feature,
 html[data-theme="light"] .oak-layout .oak-layout-process > div > div,
 html[data-theme="light"] .oak-layout .oak-layout-why > div > div,
@@ -1068,26 +1048,22 @@ html[data-theme="light"] .oak-layout,
 html[data-theme="light"] .oak-site,
 html[data-theme="light"] main,
 html[data-theme="light"] footer { background: #f7f5ef !important; color: #273029 !important; }
-html[data-theme="light"] .oak-layout h1, html[data-theme="light"] .oak-layout h2, html[data-theme="light"] .oak-layout h3,
-html[data-theme="light"] .oak-site h1, html[data-theme="light"] .oak-site h2, html[data-theme="light"] .oak-site h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; color: #26312a !important; }
 html[data-theme="light"] .oak-layout .oak-nav { top: 12px; width: min(1120px,calc(100% - 42px)); }
 html[data-theme="light"] .oak-layout .oak-nav nav,
 html[data-theme="light"] .oak-site .oak-nav nav { height: 58px; border: 1px solid #d8dbca !important; border-radius: 15px; background: rgba(255,254,248,.94) !important; box-shadow: 0 8px 24px rgba(47,58,45,.08) !important; }
 html[data-theme="light"] .oak-nav a, html[data-theme="light"] .oak-nav button { color: #405044 !important; }
-html[data-theme="light"] .oak-layout .oak-layout-hero { width: min(1120px,calc(100% - 42px)); margin-top: 28px; border: 0; border-radius: 22px; background: #e7eee0 !important; overflow: hidden; }
-html[data-theme="light"] .oak-layout-hero > div:first-child { min-height: 530px; }
-html[data-theme="light"] .oak-layout-hero > div:first-child > div { background: linear-gradient(90deg,rgba(231,238,224,.18),rgba(231,238,224,.02)) !important; }
-html[data-theme="light"] .oak-layout-hero > div:nth-child(2) { background: #e7eee0 !important; padding: clamp(42px,6vw,78px) clamp(28px,5vw,70px); }
-html[data-theme="light"] .oak-layout-hero h1 { font-size: clamp(42px,5.2vw,72px); line-height: .94; text-transform: none; }
-html[data-theme="light"] .oak-layout-hero h1 em, html[data-theme="light"] .oak-site em { color: #7b9eb0 !important; }
+
+
+
+
+
 html[data-theme="light"] .oak-layout .oak-layout-intro { max-width: 750px; margin-top: 90px; }
 html[data-theme="light"] .oak-layout .oak-layout-intro h2 { font-size: clamp(38px,4.8vw,62px); }
 html[data-theme="light"] .oak-layout .oak-layout-feature,
 html[data-theme="light"] .oak-layout .oak-layout-process > div > div,
 html[data-theme="light"] .oak-layout .oak-layout-why > div > div,
 html[data-theme="light"] .oak-layout .oak-layout-faq > div > div { background: #fffef9 !important; border-color: #e0e0d3 !important; border-radius: 16px; }
-html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd),
-html[data-theme="light"] .oak-layout .oak-layout-why > div > div:nth-child(odd) { background: #f0f3e8 !important; }
+html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd) { background: #f0f3e8 !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades { width: 100%; border-radius: 0; background: #c8d3ab !important; padding-block: 72px; }
 html[data-theme="light"] .oak-layout .oak-layout-trades > div { background: transparent !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades article { background: #fffef9 !important; border-radius: 14px; }
@@ -1100,7 +1076,7 @@ html[data-theme="light"] .oak-layout .oak-layout-cta h2 { color: #26312a !import
 html[data-theme="light"] .oak-layout a[href="/book-a-call"], html[data-theme="light"] .oak-site a[href="/book-a-call"], html[data-theme="light"] .oak-nav a[href="/book-a-call"] { background: #8e9d70 !important; border-color: #8e9d70 !important; color: #fffef9 !important; }
 html[data-theme="light"] .theme-toggle { background: #edf1e2 !important; border-color: #d4dcc3 !important; }
 html[data-theme="light"] .theme-toggle button.active { background: #8e9d70 !important; color: #fffef9 !important; }
-@media (max-width: 767px) { html[data-theme="light"] .oak-layout .oak-nav { top: 7px; width: calc(100% - 22px); } html[data-theme="light"] .oak-layout .oak-layout-hero { width: calc(100% - 22px); margin-top: 16px; } }
+@media (max-width: 767px) { html[data-theme="light"] .oak-layout .oak-nav { top: 7px; width: calc(100% - 22px); }  }
 
 /* Final white-tone treatment: white leads; espresso and mist-blue are accents only. */
 html[data-theme="light"] { --background: #ffffff; --foreground: #3c302c; --color-blue: #91adbc; --color-purple: #64382f; --color-navy: #3c302c; --color-muted: #786b65; }
@@ -1109,13 +1085,12 @@ html[data-theme="light"] .oak-layout .oak-nav { top: 0; width: 100%; max-width: 
 html[data-theme="light"] .oak-layout .oak-nav nav, html[data-theme="light"] .oak-site .oak-nav nav { height: 60px; border: 0 !important; border-radius: 0; background: #613a31 !important; box-shadow: none !important; }
 html[data-theme="light"] .oak-nav a, html[data-theme="light"] .oak-nav button { color: #fffdfa !important; }
 html[data-theme="light"] .oak-nav nav > a img { filter: brightness(0) invert(1); }
-html[data-theme="light"] .oak-layout .oak-layout-hero { width: min(1200px,calc(100% - 44px)); margin-top: 28px; background: #f6f5f2 !important; border: 1px solid #e3ded8 !important; border-radius: 16px; }
-html[data-theme="light"] .oak-layout-hero > div:nth-child(2) { background: #f6f5f2 !important; }
-html[data-theme="light"] .oak-layout-hero h1 { color: #56372f !important; }
-html[data-theme="light"] .oak-layout-hero h1 em, html[data-theme="light"] .oak-site em { color: #7c9caf !important; }
+
+
+
 html[data-theme="light"] .oak-layout .oak-layout-intro { max-width: 820px; margin-top: 100px; }
 html[data-theme="light"] .oak-layout .oak-layout-feature, html[data-theme="light"] .oak-layout .oak-layout-process > div > div, html[data-theme="light"] .oak-layout .oak-layout-why > div > div, html[data-theme="light"] .oak-layout .oak-layout-faq > div > div, html[data-theme="light"] .oak-layout .oak-layout-partners, html[data-theme="light"] .oak-layout .oak-layout-partners > div > div, html[data-theme="light"] .oak-layout .oak-layout-cta > div, html[data-theme="light"] .oak-layout .oak-layout-proof > div:last-child { background: #ffffff !important; border-color: #e7e1dc !important; }
-html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd), html[data-theme="light"] .oak-layout .oak-layout-why > div > div:nth-child(odd) { background: #fbfaf8 !important; }
+html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd) { background: #fbfaf8 !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades { background: #9db8c6 !important; padding-block: 70px; }
 html[data-theme="light"] .oak-layout .oak-layout-trades article { background: #fff !important; border-radius: 10px; }
 html[data-theme="light"] .oak-layout .oak-layout-trades article h3 { color: #3c302c !important; background: linear-gradient(transparent,#fff 55%) !important; }
@@ -1128,11 +1103,11 @@ html[data-theme="light"] .theme-toggle button { color: #fffdfa !important; }
 html[data-theme="light"] .theme-toggle button.active { background: #fffdfa !important; color: #613a31 !important; }
 
 /* Component contrast repairs for the Light theme. */
-html[data-theme="light"] .oak-layout-hero .hero-checklist li > span:last-child { color: #4d403b !important; }
-html[data-theme="light"] .oak-layout-hero .hero-checklist li > span:first-child { background: #efe2dd !important; }
-html[data-theme="light"] .oak-layout-hero .hero-checklist li > span:first-child svg { color: #c45a4c !important; }
-html[data-theme="light"] .oak-layout-hero .hero-ratings { border-top-color: #d9cec6 !important; }
-html[data-theme="light"] .oak-layout-hero .rating-badge > div > div:first-child { color: #3f302b !important; }
+
+
+
+
+
 html[data-theme="light"] .oak-layout-process { background: #fffdfa !important; color: #3f302b !important; }
 html[data-theme="light"] .oak-layout-process > span { background: #f1e4de !important; border-color: #e2d1c8 !important; color: #7a4b40 !important; }
 html[data-theme="light"] .oak-layout-process > h2 { color: #4d332c !important; }
@@ -1158,10 +1133,10 @@ html[data-theme="light"] .oak-nav nav > div.absolute div { color: #4d332c !impor
 html[data-theme="light"] .oak-nav nav > div.absolute a:hover { background: #f5ece6 !important; }
 
 /* Global Light-mode visibility guard: prevents component utility colors from hiding content. */
-html[data-theme="light"] .oak-site section:not(.oak-layout-hero),
+
 html[data-theme="light"] .oak-site article,
-html[data-theme="light"] .oak-site [class*="bg-[#0"],
-html[data-theme="light"] .oak-site [class*="bg-[#1"],
+html[data-theme="light"] .oak-site [class*="bg-[#0"]:not(:where(.hero-checklist li > span)),
+html[data-theme="light"] .oak-site [class*="bg-[#1"]:not(:where(.oak-layout-why > div > div)),
 html[data-theme="light"] .oak-site [class*="bg-[#2"] { background-color: #fffdfa !important; background-image: none !important; }
 html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6,p,li,label,legend,small,summary,dt,dd) { color: #3f302b !important; opacity: 1 !important; }
 html[data-theme="light"] .oak-site :is(a,button) { color: #4d332c !important; opacity: 1 !important; }
@@ -1216,7 +1191,7 @@ html[data-theme="light"] .pricing-page > section:nth-of-type(2) > div:first-of-t
 html[data-theme="light"] .pricing-page > section:nth-of-type(2) > div:first-of-type > div:nth-child(2) { background: #f2f6f7 !important; }
 html[data-theme="light"] .pricing-page > section:nth-of-type(2) > div :is(h1,h2,h3,p,span,li,a) { color: #3f302b !important; }
 html[data-theme="light"] .pricing-page > section:nth-of-type(2) > div a[href="/book-a-call"] { color: #fffdfa !important; }
-@media (max-width: 767px) { html[data-theme="light"] .oak-layout .oak-nav { width: 100%; } html[data-theme="light"] .oak-layout .oak-layout-hero { width: calc(100% - 22px); margin-top: 16px; } }
+@media (max-width: 767px) { html[data-theme="light"] .oak-layout .oak-nav { width: 100%; }  }
 
 /* Warm Flowblox-like light palette: light surfaces only, with strong readable ink. */
 html[data-theme="light"] { --background: #fcf5e8; --foreground: #1e1e1b; --color-blue: #a7b67c; --color-purple: #1e1e1b; --color-navy: #1e1e1b; --color-muted: #6e695e; }
@@ -1226,12 +1201,11 @@ html[data-theme="light"] .oak-layout p, html[data-theme="light"] .oak-site p, ht
 html[data-theme="light"] .oak-layout .oak-nav nav, html[data-theme="light"] .oak-site .oak-nav nav { background: #fcf5e8 !important; border-bottom: 1px solid #e9dfd0 !important; }
 html[data-theme="light"] .oak-nav a, html[data-theme="light"] .oak-nav button { color: #1e1e1b !important; }
 html[data-theme="light"] .oak-nav nav > a img { filter: none; }
-html[data-theme="light"] .oak-layout .oak-layout-hero { background: #fcf5e8 !important; border-color: #eadfce !important; }
-html[data-theme="light"] .oak-layout-hero > div:nth-child(2) { background: #fcf5e8 !important; }
-html[data-theme="light"] .oak-layout-hero h1, html[data-theme="light"] .oak-layout-hero h1 em, html[data-theme="light"] .oak-site em { color: #1e1e1b !important; }
+
+
 html[data-theme="light"] .oak-layout .oak-layout-feature, html[data-theme="light"] .oak-layout .oak-layout-process > div > div, html[data-theme="light"] .oak-layout .oak-layout-why > div > div, html[data-theme="light"] .oak-layout .oak-layout-faq > div > div, html[data-theme="light"] .oak-layout .oak-layout-partners, html[data-theme="light"] .oak-layout .oak-layout-partners > div > div, html[data-theme="light"] .oak-layout .oak-layout-cta > div, html[data-theme="light"] .oak-layout .oak-layout-proof > div:last-child { background: #f8efdf !important; border-color: #e5d9c9 !important; color: #1e1e1b !important; }
-html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd), html[data-theme="light"] .oak-layout .oak-layout-why > div > div:nth-child(odd) { background: #d4c3a7 !important; }
-html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(even), html[data-theme="light"] .oak-layout .oak-layout-why > div > div:nth-child(even) { background: #aebc87 !important; }
+html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd) { background: #d4c3a7 !important; }
+html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(even) { background: #aebc87 !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades { background: #d4c3a7 !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades > div { background: transparent !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades article, html[data-theme="light"] .oak-layout .oak-layout-trades article h3 { background: #f8efdf !important; color: #1e1e1b !important; }
@@ -1250,12 +1224,11 @@ html[data-theme="light"] .oak-layout p, html[data-theme="light"] .oak-site p, ht
 html[data-theme="light"] .oak-layout .oak-nav nav, html[data-theme="light"] .oak-site .oak-nav nav { background: #613a31 !important; border-color: #613a31 !important; }
 html[data-theme="light"] .oak-nav a, html[data-theme="light"] .oak-nav button { color: #fffdfa !important; }
 html[data-theme="light"] .oak-nav nav > a img { filter: brightness(0) invert(1); }
-html[data-theme="light"] .oak-layout .oak-layout-hero { background: #f5f2ee !important; border-color: #e1d8d1 !important; }
-html[data-theme="light"] .oak-layout-hero > div:nth-child(2) { background: #f5f2ee !important; }
-html[data-theme="light"] .oak-layout-hero h1, html[data-theme="light"] .oak-layout-hero h1 em, html[data-theme="light"] .oak-site em { color: #613a31 !important; }
+
+
 html[data-theme="light"] .oak-layout .oak-layout-feature, html[data-theme="light"] .oak-layout .oak-layout-process > div > div, html[data-theme="light"] .oak-layout .oak-layout-why > div > div, html[data-theme="light"] .oak-layout .oak-layout-faq > div > div, html[data-theme="light"] .oak-layout .oak-layout-partners, html[data-theme="light"] .oak-layout .oak-layout-partners > div > div, html[data-theme="light"] .oak-layout .oak-layout-cta > div { background: #ffffff !important; border-color: #e5ddd7 !important; }
-html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd), html[data-theme="light"] .oak-layout .oak-layout-why > div > div:nth-child(odd) { background: #fbfaf8 !important; }
-html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(even), html[data-theme="light"] .oak-layout .oak-layout-why > div > div:nth-child(even) { background: #f1f0ec !important; }
+html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(odd) { background: #fbfaf8 !important; }
+html[data-theme="light"] .oak-layout .oak-layout-feature:nth-child(even) { background: #f1f0ec !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades { background: #9db4c0 !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades article { background: #ffffff !important; }
 html[data-theme="light"] .oak-layout .oak-layout-trades article h3 { background: linear-gradient(transparent,#fff 55%) !important; color: #4d332c !important; }
@@ -1303,7 +1276,7 @@ html { background: #f7f5f1; }
 html[data-theme="light"] .oak-site { --theme-page:#f7f5f1; --theme-surface:#fffdfa; --theme-soft:#edf2f3; --theme-card:#ffffff; --theme-ink:#362d29; --theme-copy:#625852; --theme-line:#ded6cf; --theme-accent:#78493f; background:var(--theme-page) !important; color:var(--theme-ink) !important; }
 html[data-theme="light"] .oak-site :is(main,section,footer,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) { background-color:var(--theme-page) !important; color:var(--theme-ink) !important; }
 html[data-theme="light"] .oak-site :is(.oak-layout-feature,.oak-layout-process > div > div,.oak-layout-why > div > div,.oak-layout-faq > div,.pricing-page > section > div > div,.service-page > section > div > div,.about-approach > div > div,.portal-login,.booking-dialog,.oak-dialog) { background:var(--theme-card) !important; background-image:none !important; border-color:var(--theme-line) !important; box-shadow:0 12px 32px rgba(54,45,41,.07) !important; }
-html[data-theme="light"] .oak-site :is(.oak-layout-partners,.oak-layout-trades,.oak-layout-proof > div:last-child,.oak-layout-cta > div,.who-fit > div:last-child,.service-page > section:nth-of-type(3) > div,.pricing-page > section:nth-of-type(2) > div:last-child) { background:#e7eff1 !important; background-image:none !important; border-color:#ccdce0 !important; }
+html[data-theme="light"] .oak-site :is(.oak-layout-proof > div:last-child,.who-fit > div:last-child,.service-page > section:nth-of-type(3) > div,.pricing-page > section:nth-of-type(2) > div:last-child) { background:#e7eff1 !important; background-image:none !important; border-color:#ccdce0 !important; }
 html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6) { color:var(--theme-ink) !important; }
 html[data-theme="light"] .oak-site :is(p,li,span,label,legend,small,summary,dt,dd,a:not([href="/book-a-call"])) { color:var(--theme-copy) !important; opacity:1 !important; }
 html[data-theme="light"] .oak-site :is(input,textarea,select,.portal-field) { background:#fff !important; color:var(--theme-ink) !important; border-color:var(--theme-line) !important; }
@@ -1323,7 +1296,7 @@ html[data-theme="light"] .oak-site .theme-toggle button.active { background:var(
 html[data-theme="dark"] .oak-site { --theme-page:#1b1918; --theme-surface:#24211f; --theme-card:#2b2725; --theme-ink:#f7f1eb; --theme-copy:#d5c9c1; --theme-line:#49413e; --theme-accent:#c67766; background:var(--theme-page) !important; color:var(--theme-ink) !important; }
 html[data-theme="dark"] .oak-site :is(main,section,footer,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) { background-color:var(--theme-page) !important; color:var(--theme-ink) !important; }
 html[data-theme="dark"] .oak-site :is(.oak-layout-feature,.oak-layout-process > div > div,.oak-layout-why > div > div,.oak-layout-faq > div,.pricing-page > section > div > div,.service-page > section > div > div,.about-approach > div > div,.portal-login,.booking-dialog,.oak-dialog) { background:var(--theme-card) !important; background-image:none !important; border-color:var(--theme-line) !important; box-shadow:0 14px 34px rgba(0,0,0,.2) !important; }
-html[data-theme="dark"] .oak-site :is(.oak-layout-partners,.oak-layout-trades,.oak-layout-proof > div:last-child,.oak-layout-cta > div,.who-fit > div:last-child,.service-page > section:nth-of-type(3) > div,.pricing-page > section:nth-of-type(2) > div:last-child) { background:#242b2d !important; background-image:none !important; border-color:#3e4a4d !important; }
+html[data-theme="dark"] .oak-site :is(.oak-layout-proof > div:last-child,.who-fit > div:last-child,.service-page > section:nth-of-type(3) > div,.pricing-page > section:nth-of-type(2) > div:last-child) { background:#242b2d !important; background-image:none !important; border-color:#3e4a4d !important; }
 html[data-theme="dark"] .oak-site :is(h1,h2,h3,h4,h5,h6) { color:var(--theme-ink) !important; }
 html[data-theme="dark"] .oak-site :is(p,li,span,label,legend,small,summary,dt,dd,a:not([href="/book-a-call"])) { color:var(--theme-copy) !important; opacity:1 !important; }
 html[data-theme="dark"] .oak-site :is(input,textarea,select,.portal-field) { background:#201d1c !important; color:var(--theme-ink) !important; border-color:var(--theme-line) !important; }
@@ -1353,8 +1326,8 @@ html[data-theme="light"] .client-portal { background: #fffdfa !important; backgr
 html[data-theme="light"] .oak-site [class*="bg-gradient"],
 html[data-theme="light"] .oak-site [class*="from-[#"],
 html[data-theme="light"] .oak-site [class*="to-[#"],
-html[data-theme="light"] .oak-site [class*="bg-[#0"],
-html[data-theme="light"] .oak-site [class*="bg-[#1"],
+html[data-theme="light"] .oak-site [class*="bg-[#0"]:not(:where(.hero-checklist li > span)),
+html[data-theme="light"] .oak-site [class*="bg-[#1"]:not(:where(.oak-layout-why > div > div)),
 html[data-theme="light"] .oak-site [class*="bg-[#2"] { background: #f5ebe5 !important; background-image: none !important; border-color: #dfd0c7 !important; }
 html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6,p,li,span,small,label,legend,summary,dt,dd) { color: #3f302b !important; opacity: 1 !important; }
 html[data-theme="light"] .oak-site [class*="text-white"],
@@ -1407,7 +1380,7 @@ html[data-theme="light"] .oak-site .theme-toggle button.active { background: #ff
 html[data-theme="light"] .oak-site { --page:#f7f5f1; --surface:#fffdfa; --card:#ffffff; --soft:#eaf1f3; --ink:#362d29; --copy:#625852; --line:#ded6cf; --accent:#78493f; background:var(--page)!important; color:var(--ink)!important; }
 html[data-theme="light"] .oak-site :is(main,section,footer,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) { background-color:var(--page)!important; color:var(--ink)!important; }
 html[data-theme="light"] .oak-site :is(.oak-layout-feature,.oak-layout-process>div>div,.oak-layout-why>div>div,.oak-layout-faq>div,.pricing-page>section>div>div,.service-page>section>div>div,.about-approach>div>div,.portal-login,.booking-dialog,.oak-dialog) { background:var(--card)!important; background-image:none!important; border-color:var(--line)!important; box-shadow:0 12px 32px rgba(54,45,41,.07)!important; }
-html[data-theme="light"] .oak-site :is(.oak-layout-partners,.oak-layout-trades,.oak-layout-proof>div:last-child,.oak-layout-cta>div,.who-fit>div:last-child,.service-page>section:nth-of-type(3)>div,.pricing-page>section:nth-of-type(2)>div:last-child) { background:var(--soft)!important; background-image:none!important; border-color:#ccdce0!important; }
+html[data-theme="light"] .oak-site :is(.oak-layout-proof>div:last-child,.who-fit>div:last-child,.service-page>section:nth-of-type(3)>div,.pricing-page>section:nth-of-type(2)>div:last-child) { background:var(--soft)!important; background-image:none!important; border-color:#ccdce0!important; }
 html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6) { color:var(--ink)!important; }
 html[data-theme="light"] .oak-site :is(p,li,span,label,legend,small,summary,dt,dd,a:not([href="/book-a-call"])) { color:var(--copy)!important; opacity:1!important; }
 html[data-theme="light"] .oak-site :is(input,textarea,select,.portal-field) { background:#fff!important; color:var(--ink)!important; border-color:var(--line)!important; }
@@ -1425,7 +1398,7 @@ html[data-theme="light"] .oak-site .theme-toggle button.active { background:var(
 html[data-theme="dark"] .oak-site { --page:#1b1918; --card:#2b2725; --soft:#242b2d; --ink:#f7f1eb; --copy:#d5c9c1; --line:#49413e; --accent:#c67766; background:var(--page)!important; color:var(--ink)!important; }
 html[data-theme="dark"] .oak-site :is(main,section,footer,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) { background-color:var(--page)!important; color:var(--ink)!important; }
 html[data-theme="dark"] .oak-site :is(.oak-layout-feature,.oak-layout-process>div>div,.oak-layout-why>div>div,.oak-layout-faq>div,.pricing-page>section>div>div,.service-page>section>div>div,.about-approach>div>div,.portal-login,.booking-dialog,.oak-dialog) { background:var(--card)!important; background-image:none!important; border-color:var(--line)!important; box-shadow:0 14px 34px rgba(0,0,0,.2)!important; }
-html[data-theme="dark"] .oak-site :is(.oak-layout-partners,.oak-layout-trades,.oak-layout-proof>div:last-child,.oak-layout-cta>div,.who-fit>div:last-child,.service-page>section:nth-of-type(3)>div,.pricing-page>section:nth-of-type(2)>div:last-child) { background:var(--soft)!important; background-image:none!important; border-color:#3e4a4d!important; }
+html[data-theme="dark"] .oak-site :is(.oak-layout-proof>div:last-child,.who-fit>div:last-child,.service-page>section:nth-of-type(3)>div,.pricing-page>section:nth-of-type(2)>div:last-child) { background:var(--soft)!important; background-image:none!important; border-color:#3e4a4d!important; }
 html[data-theme="dark"] .oak-site :is(h1,h2,h3,h4,h5,h6) { color:var(--ink)!important; }
 html[data-theme="dark"] .oak-site :is(p,li,span,label,legend,small,summary,dt,dd,a:not([href="/book-a-call"])) { color:var(--copy)!important; opacity:1!important; }
 html[data-theme="dark"] .oak-site :is(input,textarea,select,.portal-field) { background:#201d1c!important; color:var(--ink)!important; border-color:var(--line)!important; }
@@ -1455,12 +1428,8 @@ html[data-theme="dark"] .oak-site .oak-layout-feature li > div > div:last-child 
 }
 
 /* Premium color rhythm: visual polish only; structure and content stay unchanged. */
-html[data-theme="light"] .oak-site .oak-layout-hero {
-  background:#e9f0f1 !important;
-  border-color:#cbdadd !important;
-  box-shadow:0 16px 40px rgba(54,45,41,.09) !important;
-}
-html[data-theme="light"] .oak-site .oak-layout-hero > div:nth-child(2) { background:#f8f2e9 !important; }
+
+
 html[data-theme="light"] .oak-site .oak-layout-intro { background:#f7f5f1 !important; }
 html[data-theme="light"] .oak-site .oak-layout-trades { background:#e4eef0 !important; }
 html[data-theme="light"] .oak-site .oak-layout-process { background:#faf6ef !important; }
@@ -1488,8 +1457,8 @@ html[data-theme="light"] .oak-site :is(a[href="/book-a-call"],.demo-launch,.port
   border-color:#613a31 !important;
   box-shadow:0 10px 20px rgba(97,58,49,.23) !important;
 }
-html[data-theme="dark"] .oak-site .oak-layout-hero { background:#283032 !important; border-color:#465457 !important; }
-html[data-theme="dark"] .oak-site .oak-layout-hero > div:nth-child(2) { background:#252321 !important; }
+
+
 html[data-theme="dark"] .oak-site .oak-layout-trades,
 html[data-theme="dark"] .oak-site .oak-layout-partners { background:#242d2f !important; }
 html[data-theme="dark"] .oak-site .oak-layout-process,
@@ -1513,15 +1482,15 @@ html[data-theme="light"] .oak-site :is(main,.pricing-page,.service-page,.about-a
 html[data-theme="dark"] .oak-site :is(main,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) { background:var(--saas-page)!important; }
 html[data-theme] .oak-site :is(h1,h2,h3,h4,h5,h6) { color:var(--saas-ink)!important; letter-spacing:-.025em; }
 html[data-theme] .oak-site :is(p,li,span,label,legend,small,summary,dt,dd) { color:var(--saas-copy)!important; opacity:1!important; -webkit-text-fill-color:currentColor!important; }
-html[data-theme] .oak-site :is(.oak-layout-hero,.oak-layout-intro,.oak-layout-process,.oak-layout-why,.oak-layout-proof,.oak-layout-faq,.oak-layout-cta,.oak-layout-trades,.oak-layout-partners) { position:relative; isolation:isolate; }
-html[data-theme="light"] .oak-site .oak-layout-hero { background:linear-gradient(135deg,#f4f8ff 0%,#edf4ff 55%,#f8f7ff 100%)!important; border:1px solid #dbeafe!important; box-shadow:0 24px 60px rgba(37,99,235,.12)!important; }
-html[data-theme="light"] .oak-site .oak-layout-hero > div:nth-child(2) { background:linear-gradient(90deg,rgba(244,248,255,.96),rgba(244,248,255,.79),rgba(244,248,255,.08))!important; }
-html[data-theme="dark"] .oak-site .oak-layout-hero { background:radial-gradient(circle at 80% 15%,rgba(226,74,59,.18),transparent 30%),linear-gradient(135deg,#171719,#0d0d0f 75%)!important; border-color:rgba(226,74,59,.3)!important; box-shadow:0 26px 70px rgba(0,0,0,.38)!important; }
-html[data-theme="dark"] .oak-site .oak-layout-hero > div:nth-child(2) { background:linear-gradient(90deg,rgba(13,13,15,.97),rgba(13,13,15,.8),rgba(13,13,15,.05))!important; }
-html[data-theme] .oak-site .oak-layout-hero h1 { font-size:clamp(2.35rem,5vw,4.7rem)!important; line-height:1.02!important; max-width:800px; }
-html[data-theme="light"] .oak-site .oak-layout-hero h1 em { color:var(--saas-indigo)!important; }
-html[data-theme="dark"] .oak-site .oak-layout-hero h1 em { color:#f57667!important; }
-html[data-theme] .oak-site .oak-layout-hero :is(p,.hero-checklist span) { color:var(--saas-copy)!important; }
+
+
+
+
+
+
+
+
+
 html[data-theme] .oak-site .oak-layout-intro { background:transparent!important; }
 html[data-theme="light"] .oak-site .oak-layout-process { background:#f7f9fc!important; border-radius:32px; }
 html[data-theme="light"] .oak-site .oak-layout-why { background:#f1f6ff!important; border-radius:32px; }
@@ -1577,9 +1546,9 @@ html[data-theme] .oak-site :focus-visible { outline:3px solid var(--saas-blue)!i
   html[data-theme] .oak-site .oak-layout-feature:nth-child(3n) { animation-delay:.16s; }
 }
 @media (max-width:767px) {
-  html[data-theme] .oak-site .oak-layout-hero { margin-inline:0!important; border-radius:0 0 24px 24px!important; }
-  html[data-theme] .oak-site .oak-layout-hero > div:nth-child(2) { background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.84))!important; }
-  html[data-theme="dark"] .oak-site .oak-layout-hero > div:nth-child(2) { background:linear-gradient(180deg,rgba(13,13,15,.96),rgba(13,13,15,.84))!important; }
+  
+  
+  
   html[data-theme] .oak-site :is(.oak-layout-process,.oak-layout-why,.oak-layout-proof) { border-radius:22px!important; }
   html[data-theme] .oak-site .oak-layout-proof figure { border-radius:16px!important; }
 }
@@ -1593,12 +1562,9 @@ html[data-theme="dark"] .oak-site {
   --saas-page:#171112; --saas-section:#211a1b; --saas-blue:#c95043; --saas-indigo:#8f342d;
   --saas-ink:#fff9f5; --saas-copy:#c7b8b1; --saas-line:#4c3b39; --saas-card:#292122;
 }
-html[data-theme="light"] .oak-site .oak-layout-hero {
-  background:linear-gradient(135deg,#f2f6ff 0%,#fff 60%,#eef2ff 100%)!important;
-  border-color:#cfdcf7!important;
-}
-html[data-theme="light"] .oak-site .oak-layout-hero > div:nth-child(2) { background:linear-gradient(90deg,rgba(242,246,255,.98),rgba(248,250,255,.83),rgba(248,250,255,.04))!important; }
-html[data-theme="dark"] .oak-site .oak-layout-hero { background:radial-gradient(circle at 78% 12%,rgba(201,80,67,.18),transparent 30%),linear-gradient(135deg,#241b1c,#171112 72%)!important; border-color:#573835!important; }
+
+
+
 html[data-theme="light"] .oak-site :is(.oak-layout-process,.oak-layout-proof) { background:#f5f8ff!important; }
 html[data-theme="light"] .oak-site .oak-layout-why { background:#eef4ff!important; }
 html[data-theme="light"] .oak-site :is(.oak-layout-trades,.oak-layout-partners) { background:#111936!important; }
@@ -1626,8 +1592,8 @@ html[data-theme="light"] .oak-site {
   --saas-blue:#165df5; --saas-indigo:#4058d9;
 }
 html[data-theme="light"] .oak-site :is(main,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) { background:#fff!important; }
-html[data-theme="light"] .oak-site .oak-layout-hero { background:#f6f8fd!important; border-color:#e1e7f1!important; box-shadow:0 18px 44px rgba(22,93,245,.08)!important; }
-html[data-theme="light"] .oak-site .oak-layout-hero > div:nth-child(2) { background:linear-gradient(90deg,rgba(246,248,253,.985),rgba(250,251,255,.88),rgba(250,251,255,.04))!important; }
+
+
 html[data-theme="light"] .oak-site :is(.oak-layout-process,.oak-layout-proof,.oak-layout-why) { background:#fff!important; }
 html[data-theme="light"] .oak-site .oak-layout-process { border-top:1px solid #edf0f6; border-bottom:1px solid #edf0f6; }
 html[data-theme="light"] .oak-site .oak-layout-why { background:#f5f7fb!important; }
@@ -1645,9 +1611,9 @@ html[data-theme="light"] .oak-site {
   --saas-blue:#075df5; --saas-indigo:#075df5;
 }
 html[data-theme="light"] .oak-site :is(.oak-layout-feature,.oak-layout-process>div>div,.oak-layout-why>div>div,.oak-layout-faq>div,.pricing-page>section>div>div,.service-page>section>div>div,.about-approach>div>div,.portal-login,.booking-dialog,.oak-dialog,.oak-layout-proof figure) { border-radius:14px!important; border-color:#d9e2f0!important; box-shadow:0 8px 22px rgba(17,25,54,.055)!important; }
-html[data-theme="light"] .oak-site .oak-layout-hero { background:#f5f8ff!important; border-radius:0!important; border-left:0!important; border-right:0!important; }
-html[data-theme="light"] .oak-site .oak-layout-hero h1 { color:#111936!important; }
-html[data-theme="light"] .oak-site .oak-layout-hero h1 em { color:#075df5!important; }
+
+
+
 html[data-theme="light"] .oak-site :is(.oak-layout-intro,.oak-layout-faq) { background:#fff!important; }
 html[data-theme="light"] .oak-site .oak-layout-process { background:#f6f8fc!important; border-radius:0!important; }
 html[data-theme="light"] .oak-site .oak-layout-why { background:#fff!important; border-radius:0!important; }
@@ -1685,8 +1651,8 @@ html[data-theme="dark"] :is(.oak-layout,.oak-site) .theme-toggle button { color:
 html[data-theme="dark"] :is(.oak-layout,.oak-site) .theme-toggle button.active { background:#c95043!important; color:#fff9f5!important; }
 
 /* Light mode: replace every remaining warm brand accent with product blue. */
-html[data-theme="light"] :is(.oak-layout,.oak-site) :is(em,.oak-layout-hero h1 span,.oak-layout-hero li>span:first-child svg,.oak-layout-feature li>span:first-child svg,.oak-layout-process>div>div>div:first-child,.oak-layout-why>div>div>span,.portal-mark,.portal-login-mark) { color:#075df5!important; }
-html[data-theme="light"] :is(.oak-layout,.oak-site) :is(.oak-layout-process>div>div>div:first-child,.oak-layout-why>div>div>span,.portal-mark,.portal-login-mark) { background:#eaf2ff!important; border-color:#c8dcff!important; }
+
+html[data-theme="light"] :is(.oak-layout,.oak-site) :is(.oak-layout-process>div>div>div:first-child,.portal-mark,.portal-login-mark) { background:#eaf2ff!important; border-color:#c8dcff!important; }
 html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-process>div>div>div:first-child span { color:#075df5!important; }
 html[data-theme="light"] :is(.oak-layout,.oak-site) :is(.pricing-page button[class*="bg-"],.booking-choice:hover,.demo-tabs button[aria-pressed="true"]) { background:#075df5!important; border-color:#075df5!important; color:#fff!important; }
 html[data-theme="light"] :is(.oak-layout,.oak-site) :is(.pricing-page button[class*="bg-"],.booking-choice:hover,.demo-tabs button[aria-pressed="true"]) * { color:#fff!important; }
@@ -1705,124 +1671,16 @@ html[data-theme="dark"] :is(.oak-layout,.oak-site) .oak-layout-trades article { 
 html[data-theme="dark"] :is(.oak-layout,.oak-site) .oak-layout-trades article :is(h1,h2,h3,p,span) { color:#fff9f5!important; }
 
 /* Hero composition inspired by the supplied blue product reference. */
-@media (min-width:768px) {
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero {
-    width:min(1180px,calc(100% - 48px))!important;
-    margin:28px auto 42px!important;
-    border:0!important;
-    border-radius:34px!important;
-    background:radial-gradient(circle at 68% 36%,#b9dcff 0%,#dceeff 20%,transparent 42%),linear-gradient(120deg,#fff 0%,#f6faff 60%,#eaf5ff 100%)!important;
-    box-shadow:0 22px 54px rgba(7,93,245,.14)!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img {
-    width:48%!important;
-    object-position:center center!important;
-    border-radius:0 34px 34px 0!important;
-    box-shadow:none!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > div {
-    background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.96) 43%,rgba(246,250,255,.64) 58%,transparent 82%)!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.relative { padding-right:50%!important; }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero h1 { font-size:clamp(2.4rem,4.3vw,4.25rem)!important; }
-}
-@media (max-width:767px) {
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero { margin:0!important; border-radius:0 0 28px 28px!important; background:linear-gradient(160deg,#fff,#edf6ff)!important; }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img { opacity:.32!important; object-position:center!important; }
-}
+
+
 
 /* Final hero treatment: same supplied person image, white-and-blue reference background. */
-@media (min-width:768px) {
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero {
-    min-height:610px!important;
-    overflow:hidden!important;
-    background:
-      radial-gradient(ellipse 42% 78% at 68% 54%,#b9ddff 0%,#d9edff 46%,transparent 47%),
-      linear-gradient(118deg,#ffffff 0%,#f8fbff 54%,#edf7ff 100%)!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero::before {
-    content:"";
-    position:absolute;
-    z-index:1;
-    right:5.5%;
-    top:12%;
-    width:78px;
-    height:78px;
-    opacity:.55;
-    background-image:radial-gradient(#075df5 1.5px,transparent 1.5px);
-    background-size:10px 10px;
-    pointer-events:none;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero::after {
-    content:"";
-    position:absolute;
-    z-index:1;
-    right:8%;
-    bottom:13%;
-    width:106px;
-    height:54px;
-    border-radius:16px;
-    background:rgba(255,255,255,.76);
-    border:1px solid rgba(7,93,245,.15);
-    box-shadow:0 12px 28px rgba(7,93,245,.14);
-    backdrop-filter:blur(8px);
-    pointer-events:none;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img {
-    z-index:0!important;
-    right:5%!important;
-    width:50%!important;
-    height:94%!important;
-    top:6%!important;
-    object-position:center center!important;
-    border-radius:0!important;
-    box-shadow:none!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > div {
-    z-index:1!important;
-    background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 43%,rgba(250,253,255,.62) 54%,rgba(250,253,255,.12) 64%,transparent 70%)!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.relative {
-    z-index:2!important;
-    min-height:610px!important;
-    padding-right:54%!important;
-    display:flex;
-    align-items:center;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.relative > div { max-width:470px!important; }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img { opacity:1!important; filter:none!important; }
-}
-@media (max-width:767px) {
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero {
-    background:radial-gradient(circle at 70% 38%,rgba(168,215,255,.7),transparent 42%),linear-gradient(155deg,#fff,#edf7ff)!important;
-  }
-  html[data-theme="light"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img { opacity:.38!important; }
-}
+
+
 
 /* Hero image presentation: retain the supplied image in a deliberate product-style panel. */
-@media (min-width:768px) {
-  html[data-theme] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img {
-    left:auto!important;
-    right:0!important;
-    width:43%!important;
-    height:100%!important;
-    object-fit:cover!important;
-    object-position:left center!important;
-    border-radius:0 0 0 38px!important;
-    box-shadow:-18px 0 42px rgba(15,25,54,.12)!important;
-  }
-  html[data-theme] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > div {
-    background:linear-gradient(90deg,var(--saas-page) 0%,var(--saas-page) 47%,color-mix(in srgb,var(--saas-page) 86%,transparent) 62%,transparent 84%)!important;
-  }
-  html[data-theme="dark"] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > div {
-    background:linear-gradient(90deg,#171112 0%,#171112 47%,rgba(23,17,18,.86) 62%,transparent 84%)!important;
-  }
-  html[data-theme] :is(.oak-layout,.oak-site) .oak-layout-hero > div.relative { padding-right:45%!important; }
-}
-@media (max-width:767px) {
-  html[data-theme] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > img { object-position:center top!important; opacity:.22!important; }
-  html[data-theme] :is(.oak-layout,.oak-site) .oak-layout-hero > div.absolute > div { background:linear-gradient(180deg,var(--saas-page) 0%,color-mix(in srgb,var(--saas-page) 94%,transparent) 100%)!important; }
-}
+
+
 
 /* Final contrast pass: preserve every component while keeping both themes readable. */
 html[data-theme="light"] :is(.oak-layout,.oak-site) .theme-toggle button {
@@ -2012,4 +1870,96 @@ html[data-theme="light"] .oak-layout-trades a[href="/who-we-help#trades"] {
   background:#075df5!important;
   color:#fff!important;
   opacity:1!important;
+}
+
+/* Home page contrast fixes: several earlier passes above lightened card
+   backgrounds without updating the light/white text sitting on them (or
+   the reverse), leaving some text unreadable. Several of those earlier
+   rules use long :is(...) selector lists whose most complex member (e.g.
+   ".pricing-page > section > div > div") out-specifies a normal selector
+   here, so the class is doubled below to win outright rather than relying
+   on source order. These are the last word. */
+html[data-theme] .oak-site.oak-site .oak-layout-cta.oak-layout-cta > div {
+  background: linear-gradient(115deg, #101832 45%, #25204a) !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-cta.oak-layout-cta > div {
+  background: linear-gradient(115deg, #0d0d0f 45%, #1c1420) !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-cta.oak-layout-cta > div :is(h2, span) {
+  color: #fff !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-cta.oak-layout-cta > div p {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-cta.oak-layout-cta > div > div:last-child :is(div, span) {
+  color: #fff !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-cta.oak-layout-cta > div > div:last-child div:last-child {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-why.oak-layout-why > div > div {
+  background: #151a2f !important;
+  border-color: transparent !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-why.oak-layout-why > div > div :is(h3, p) {
+  color: #fff !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-why.oak-layout-why > div > div > span {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+html[data-theme] .oak-site.oak-site .oak-layout-process.oak-layout-process > div > div > div > span:first-child {
+  color: #fff !important;
+}
+html[data-theme] .oak-site.oak-site footer :is(p, li, span, a:not([href="/book-a-call"])) {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+html[data-theme] .oak-site.oak-site footer :is(h1, h2, h3, div) {
+  color: #fff !important;
+}
+
+/* Dark theme: Hero.tsx hardcodes a light-blue card with no dark variant, so
+   it never adapted when the toggle switched — it kept floating as a bright
+   panel in an otherwise all-dark page. This brings it into the same warm
+   near-black + coral palette the rest of dark theme already uses. */
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-hero {
+  background: #171112 !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-hero > div.absolute > div {
+  background: linear-gradient(90deg, #171112 0%, #171112 38%, rgba(23, 17, 18, 0.1) 72%) !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-hero h1 {
+  color: #fff9f5 !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-hero h1 em {
+  color: #dc7468 !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-hero p {
+  color: #bdb1ab !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .hero-checklist li > span:first-child {
+  background: rgba(195, 77, 65, 0.16) !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .hero-checklist li > span:first-child svg {
+  color: #dc7468 !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .hero-checklist li > span:last-child {
+  color: #eee2da !important;
+}
+html[data-theme="dark"] .oak-site.oak-site .rating-badge > div > div:first-child {
+  color: #fff9f5 !important;
+}
+
+/* Dark theme: the WhyChoose accent cards were still forced navy-blue, a cool
+   outlier against the rest of dark theme's warm near-black/coral surfaces. */
+html[data-theme="dark"] .oak-site.oak-site .oak-layout-why.oak-layout-why > div > div {
+  background: #262021 !important;
+  border-color: #453936 !important;
+}
+
+/* Dark theme: the nav logo is a colorful filled mark (blue square, white
+   glyph), not a monochrome wordmark — brightness(0) invert(1) crushed all of
+   it to a single flat white rectangle. It reads fine on the dark nav as-is. */
+html[data-theme="dark"] .oak-site.oak-site .oak-nav nav > a img {
+  filter: none !important;
 }
