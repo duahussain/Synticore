@@ -102,7 +102,7 @@ export default function OurProcess() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1120px] px-6 py-20 md:px-10">
+      <section className="mx-auto mt-8 max-w-[1120px] px-6 py-20 md:px-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.3fr_1fr]">
           <div>
             <span className="text-[13px] font-extrabold uppercase tracking-wide text-[#0B55FF]">
@@ -150,7 +150,7 @@ export default function OurProcess() {
         </div>
       </section>
 
-      <section className="bg-[#F5F7FB] px-6 py-20 md:px-10">
+      <section className="mt-8 bg-[#F5F7FB] px-6 py-20 md:px-10">
         <div className="mx-auto max-w-[1120px] overflow-hidden rounded-[24px] bg-gradient-to-br from-[#151A2F] to-[#1D1440] p-10 md:p-14">
           <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
             <div>

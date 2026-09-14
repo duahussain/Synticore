@@ -39,7 +39,7 @@ export default function AboutUs() {
       <section className="relative overflow-hidden bg-gradient-to-b from-[#EEF1FF] to-white pt-[93px] pb-24">
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-12 px-6 pt-16 md:grid-cols-[1.3fr_1fr] md:px-10">
           <div>
-            <span className="inline-block rounded-full border border-[#0B55FF]/20 bg-white px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-[#0B55FF]">
+            <span className="about-eyebrow inline-block rounded-full border border-[#0B55FF]/20 bg-white px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-[#0B55FF]">
               About Synticore
             </span>
             <h1 className="mt-5 text-[40px] font-extrabold leading-[1.08] text-[#101832] sm:text-[48px] lg:text-[56px]">
@@ -50,7 +50,7 @@ export default function AboutUs() {
               Synticore is a business-systems company focused on practical operational improvement
               across workflow automation, Microsoft technologies, custom software, and product design.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-6">
+            <div className="about-actions mt-8 flex flex-wrap items-center gap-6">
               <a
                 href="/book-a-call"
                 className="inline-flex items-center gap-1 rounded-[14px] bg-[#0B55FF] px-6 py-3.5 text-[16px] font-extrabold text-white shadow-[0_14px_28px_rgba(11,85,255,0.3)] hover:bg-[#0a49dd]"
@@ -66,7 +66,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="rounded-[24px] bg-white p-7 shadow-[0_20px_50px_rgba(16,24,50,0.1)]">
+          <div className="about-summary-card rounded-[24px] bg-white p-7 shadow-[0_20px_50px_rgba(16,24,50,0.1)]">
             <Image
               src="/assets/syntidesk-logo.jpg"
               alt=""
@@ -89,7 +89,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1120px] px-6 py-20 md:px-10">
+      <section className="mx-auto mt-8 max-w-[1120px] px-6 py-20 md:px-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.3fr_1fr]">
           <div>
             <span className="text-[13px] font-extrabold uppercase tracking-wide text-[#0B55FF]">

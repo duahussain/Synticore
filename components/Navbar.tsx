@@ -97,6 +97,13 @@ export default function Navbar() {
     window.localStorage.setItem("oakmont-theme", theme);
   }, [theme, themeReady]);
 
+  const changeTheme = (nextTheme: "light" | "dark") => {
+    if (nextTheme === theme) return;
+    document.documentElement.classList.add("theme-transitioning");
+    window.setTimeout(() => document.documentElement.classList.remove("theme-transitioning"), 360);
+    setTheme(nextTheme);
+  };
+
   return (
     <div className="oak-nav sticky top-4 z-50 mx-auto w-[94%] max-w-[1400px]">
       <nav ref={navRef} onKeyDown={e => { if(e.key === "Escape") {setOpenMenu(null); setMobileOpen(false);} }}
@@ -137,8 +144,8 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3 sm:gap-4">
           <div className="theme-toggle" role="tablist" aria-label="Color theme">
-            <button type="button" role="tab" aria-selected={theme === "light"} className={theme === "light" ? "active" : ""} onClick={() => setTheme("light")}>Light</button>
-            <button type="button" role="tab" aria-selected={theme === "dark"} className={theme === "dark" ? "active" : ""} onClick={() => setTheme("dark")}>Dark</button>
+            <button type="button" role="tab" aria-selected={theme === "light"} className={theme === "light" ? "active" : ""} onClick={() => changeTheme("light")}>Light</button>
+            <button type="button" role="tab" aria-selected={theme === "dark"} className={theme === "dark" ? "active" : ""} onClick={() => changeTheme("dark")}>Dark</button>
           </div>
           <a
             href="tel:+18888100013"

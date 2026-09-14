@@ -9,8 +9,8 @@ const bullets = [
 
 export default function Hero() {
   return (
-    <section className="oak-layout-hero relative overflow-hidden bg-[#EEF4FF] pt-[93px] pb-8">
-      <div className="absolute inset-0">
+    <section className="oak-layout-hero home-hero relative overflow-hidden bg-[#EEF4FF] pt-[93px] pb-8">
+        <div className="absolute inset-0">
         <Image
           src="/assets/syntidesk/overview-poster.jpg"
           alt="SyntiDesk product overview"
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#D9E7FA_0%,#D9E7FA_38%,rgba(217,231,250,0.1)_72%)]" />
       </div>
 
-      <div className="relative min-h-[607px] px-6 md:px-[112px]">
+        <div className="relative min-h-[607px] px-6 md:px-[112px]">
         <div className="max-w-[660px]">
           <h1 className="text-[36px] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#101832] sm:text-[44px] lg:text-[54px]">
             We improve the systems behind{" "}
@@ -55,9 +55,18 @@ export default function Hero() {
           <div className="hero-ratings mt-8 flex flex-wrap items-center gap-6">
             <RatingBadge src="/assets/syntidesk-logo.jpg" name="SyntiDesk" />
           </div>
+          </div>
         </div>
-      </div>
-    </section>
+
+        <div className="hero-synticore-brand" aria-label="Synticore">
+          <Image
+            src="/assets/synticore-logo.png"
+            alt="Synticore"
+            width={1383}
+            height={260}
+          />
+        </div>
+      </section>
   );
 }
 

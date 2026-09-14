@@ -147,7 +147,7 @@ export default function WhoWeHelp() {
         </div>
       </section>
 
-      <section id="trades" className="mx-auto max-w-[1120px] px-6 py-20 md:px-10">
+      <section id="trades" className="mx-auto mt-8 max-w-[1120px] px-6 py-20 md:px-10">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {categories.map((c) => (
             <div
