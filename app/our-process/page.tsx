@@ -77,7 +77,7 @@ export default function OurProcess() {
           <div className="rounded-[24px] bg-white p-7 shadow-[0_20px_50px_rgba(16,24,50,0.1)]">
             <div className="flex items-center gap-3 border-b border-black/5 pb-4">
               <Image
-                src="/assets/syntidesk-logo.jpg"
+                src="/assets/auriboost-logo.jpeg"
                 alt=""
                 width={36}
                 height={36}

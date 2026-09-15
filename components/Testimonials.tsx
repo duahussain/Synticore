@@ -1,18 +1,18 @@
 import Image from "next/image";
 
 const productViews = [
-  { src: "/assets/syntidesk/dashboard-overview.jpg", alt: "SyntiDesk dashboard overview" },
-  { src: "/assets/syntidesk/interactions-review.jpg", alt: "SyntiDesk interaction review workspace" },
-  { src: "/assets/syntidesk/appointments.jpg", alt: "SyntiDesk appointments workspace" },
-  { src: "/assets/syntidesk/work-queue.jpg", alt: "SyntiDesk work queue workspace" },
-  { src: "/assets/syntidesk/overview-poster.jpg", alt: "SyntiDesk product overview" },
+  { src: "/assets/syntidesk/dashboard-overview.jpg", alt: "AuriBoost dashboard overview" },
+  { src: "/assets/syntidesk/interactions-review.jpg", alt: "AuriBoost interaction review workspace" },
+  { src: "/assets/syntidesk/appointments.jpg", alt: "AuriBoost appointments workspace" },
+  { src: "/assets/syntidesk/work-queue.jpg", alt: "AuriBoost work queue workspace" },
+  { src: "/assets/syntidesk/overview-poster.jpg", alt: "AuriBoost product overview" },
 ];
 
 export default function Testimonials() {
   return (
     <section className="oak-layout-proof mx-auto max-w-[1120px] px-6 py-20 text-center md:px-10">
       <div className="text-[13px] font-extrabold uppercase tracking-wide text-[#0B55FF]">
-        SyntiDesk in action
+        AuriBoost in action
       </div>
       <h2 className="mt-3 text-[34px] font-bold leading-[1.04] text-[#101832] sm:text-[46px] lg:text-[58px]">
         One front desk for every customer operation.

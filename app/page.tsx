@@ -29,70 +29,70 @@ export default function Home() {
           ]}
         >
           <FeatureTextBlock
-            heading="Workflow Automation"
-            description="Reduce repetitive work and keep routine processes moving across intake, approvals, routing, notifications, and follow-up."
+            heading="AI Receptionist"
+            description="AuriBoost answers phone calls and website chats 24/7 in your business's own voice and knowledge."
             items={[
               {
-                title: "Simplify routine work",
-                desc: "Remove unnecessary steps and clarify what should happen next.",
+                title: "Natural conversations",
+                desc: "Give callers helpful answers instead of an IVR menu or voicemail.",
               },
               {
-                title: "Keep work moving",
-                desc: "Automate intake, approvals, notifications, follow-up, and status changes.",
+                title: "Website chat",
+                desc: "Turn every chat into a qualified lead, an answer, or a booked appointment.",
               },
               {
-                title: "Reduce manual coordination",
-                desc: "Replace repeated entry, status checking, reminders, and routing handled by hand.",
-              },
-              {
-                title: "Build around the real process",
-                desc: "Use automation where it helps and keep people involved where judgment matters.",
-              },
-            ]}
-          />
-
-          <FeatureTextBlock
-            heading="Microsoft Business Solutions"
-            description="Make the Microsoft tools your business already owns work together better."
-            items={[
-              {
-                title: "SharePoint and Microsoft 365",
-                desc: "Modernize document management, permissions, internal processes, and legacy workflows.",
-              },
-              {
-                title: "Power Automate and Power Apps",
-                desc: "Add practical structure to workflows and internal operating experiences.",
-              },
-              {
-                title: "Teams, forms, lists, and documents",
-                desc: "Connect the tools that otherwise operate separately.",
-              },
-              {
-                title: "Modernize with purpose",
-                desc: "Improve what already works instead of replacing systems unnecessarily.",
-              },
-            ]}
-          />
-
-          <FeatureTextBlock
-            heading="AI & Customer Operations"
-            description="Use AI for routine customer work while keeping people involved where judgment matters."
-            items={[
-              {
-                title: "SyntiDesk",
-                desc: "A self-contained AI front desk for calls, leads, appointments, and follow-up.",
-              },
-              {
-                title: "Customer intake and routing",
-                desc: "Qualify requests, capture details, and move work to the right person.",
-              },
-              {
-                title: "Scheduling and follow-up",
-                desc: "Reduce manual back-and-forth while keeping customer communication moving.",
+                title: "Missed-call text back",
+                desc: "Reply within seconds when a caller cannot reach your team.",
               },
               {
                 title: "Human escalation",
-                desc: "Keep people involved for exceptions and decisions that need judgment.",
+                desc: "Transfer to a person or take a message whenever Synti needs help.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="Smart Booking"
+            description="Book real appointments while the conversation is happening, with live calendar availability."
+            items={[
+              {
+                title: "Live availability",
+                desc: "Check your calendar and confirm the right time immediately.",
+              },
+              {
+                title: "Timezone-aware",
+                desc: "Show every visitor a time in their own timezone and store it correctly.",
+              },
+              {
+                title: "Automatic reminders",
+                desc: "Keep customers informed before their appointment.",
+              },
+              {
+                title: "Calendar sync",
+                desc: "Keep Google Calendar and Outlook Calendar in sync.",
+              },
+            ]}
+          />
+
+          <FeatureTextBlock
+            heading="Leads & Follow-up"
+            description="Every call, chat, form, and appointment becomes an organized record your team can act on."
+            items={[
+              {
+                title: "AuriBoost Desk",
+                desc: "One view for every lead, call, chat, appointment, and follow-up.",
+              },
+              {
+                title: "Lead scoring",
+                desc: "Capture what each customer needs and prioritize the right next step.",
+              },
+              {
+                title: "Unified interactions",
+                desc: "Review recordings, transcripts, summaries, and conversations in one timeline.",
+              },
+              {
+                title: "Work queue",
+                desc: "Turn conversations into assigned follow-up tasks that do not get missed.",
               },
             ]}
           />

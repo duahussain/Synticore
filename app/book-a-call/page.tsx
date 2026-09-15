@@ -13,8 +13,8 @@ export default function BookACall() {
       <div className="mx-auto max-w-[820px] text-center">
         <div className="flex justify-center">
           <Image
-            src="/assets/syntidesk-logo.jpg"
-            alt="The Oakmont Digital"
+            src="/assets/auriboost-logo.jpeg"
+            alt="AuriBoost"
             width={230}
             height={47}
             className="h-[36px] w-auto"

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -2850,4 +2851,664 @@ html[data-theme] .oak-site .oak-layout-faq > div {
   border:0!important;
   border-radius:0!important;
   box-shadow:none!important;
+}
+
+/* AuriBoost Light Mode palette only. Dark Mode intentionally retains its
+   existing values, surfaces, borders, gradients, and interactive states. */
+html[data-theme="light"] .oak-site {
+  --saas-page:#ffffff;
+  --saas-section:#f7f9fc;
+  --saas-card:#ffffff;
+  --saas-ink:#0c1f39;
+  --saas-copy:#38506e;
+  --saas-line:#dfe7ef;
+  --saas-blue:#14b7a5;
+  --saas-indigo:#0c1f39;
+}
+html[data-theme="light"] .oak-site,
+html[data-theme="light"] .oak-site :is(p,span,li,a,button,input,textarea,select,label,legend,small,summary) {
+  font-family:"Inter",Arial,Helvetica,sans-serif!important;
+}
+html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6) {
+  font-family:"Manrope","Inter",Arial,Helvetica,sans-serif!important;
+}
+html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6) {
+  color:#0c1f39!important;
+}
+html[data-theme="light"] .oak-site :is(a[href="/book-a-call"],.demo-launch,.portal-submit,.booking-submit) {
+  background:#14b7a5!important;
+  box-shadow:0 12px 24px rgba(20,183,165,.22)!important;
+}
+html[data-theme="light"] .oak-site :is(a[href="/book-a-call"],.demo-launch,.portal-submit,.booking-submit):hover {
+  background:#0c1f39!important;
+}
+html[data-theme="light"] .oak-site .rating-badge > div > div:last-child {
+  color:#d3a12a!important;
+}
+
+/* Final AuriBoost Light Mode audit: this layer deliberately follows legacy
+   component rules so every existing route inherits the same palette. */
+html[data-theme="light"] .oak-site {
+  --background:#ffffff;
+  --foreground:#0c1f39;
+  --color-blue:#14b7a5;
+  --color-purple:#d3a12a;
+  --color-navy:#0c1f39;
+  --color-muted:#38506e;
+  background:#ffffff!important;
+  color:#0c1f39!important;
+}
+html[data-theme="light"] body { background:#ffffff!important; color:#0c1f39!important; }
+html[data-theme="light"] .oak-site :is(main,.oak-layout,.pricing-page,.service-page,.about-approach,.who-fit,.client-portal) {
+  background:#ffffff!important;
+}
+html[data-theme="light"] .oak-site :is(p,li,span,label,legend,small,summary,dt,dd) {
+  color:#38506e!important;
+}
+html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6) { color:#0c1f39!important; }
+html[data-theme="light"] .oak-site :is(.oak-nav nav,.oak-dialog,.booking-dialog,.portal-login,.oak-layout-feature,.oak-layout-process > div > div,.oak-layout-why > div > div,.oak-layout-faq > div > div,.pricing-page > section > div > div,.service-page > section > div > div,.about-summary-card,.oak-layout-proof figure) {
+  background:#ffffff!important;
+  border-color:#dfe7ef!important;
+}
+html[data-theme="light"] .oak-site :is(.oak-layout-process,.oak-layout-why,.oak-layout-partners,.oak-layout-faq,.service-page > section:nth-of-type(2),.pricing-page > section:nth-of-type(2)) {
+  background:#f7f9fc!important;
+  border-color:#dfe7ef!important;
+}
+html[data-theme="light"] .oak-site .oak-nav :is(a,button) { color:#0c1f39!important; }
+html[data-theme="light"] .oak-site .oak-nav :is(a,button):hover { color:#14b7a5!important; }
+html[data-theme="light"] .oak-site :is(a:not([href="/book-a-call"]),.oak-dialog a) { color:#14b7a5!important; }
+html[data-theme="light"] .oak-site :is(input,textarea,select,.portal-field) {
+  background:#ffffff!important;
+  color:#0c1f39!important;
+  border-color:#dfe7ef!important;
+}
+html[data-theme="light"] .oak-site :is(input,textarea,select,.portal-field):focus,
+html[data-theme="light"] .oak-site :is(input,textarea,select,.portal-field):focus-within {
+  border-color:#14b7a5!important;
+  box-shadow:0 0 0 3px rgba(20,183,165,.16)!important;
+}
+html[data-theme="light"] .oak-site :is(a[href="/book-a-call"],.demo-launch,.portal-submit,.booking-submit,.oak-layout-faq button[aria-expanded="true"]) {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+html[data-theme="light"] .oak-site :is(a[href="/book-a-call"],.demo-launch,.portal-submit,.booking-submit,.oak-layout-faq button[aria-expanded="true"]) * { color:#ffffff!important; }
+html[data-theme="light"] .oak-site :is(.oak-layout-trades,.oak-layout-partners,.oak-layout-cta > div) {
+  background:#0c1f39!important;
+  border-color:#0c1f39!important;
+}
+html[data-theme="light"] .oak-site :is(.oak-layout-trades,.oak-layout-partners,.oak-layout-cta > div) :is(h1,h2,h3,h4,p,span,li,a) { color:#ffffff!important; }
+html[data-theme="light"] .oak-site .rating-badge > div > div:last-child,
+html[data-theme="light"] .oak-site [class*="text-[#FFB81C]"] { color:#d3a12a!important; }
+html[data-theme="light"] .oak-site :is(.theme-toggle button.active,.oak-layout-process > div > div > div:first-child) {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+}
+html[data-theme="light"] .oak-site :focus-visible { outline-color:#14b7a5!important; }
+
+/* AuriBoost Light Mode: replace the legacy brown industry-card surface only. */
+html[data-theme="light"] .oak-site .oak-layout-trades article {
+  background:#0c1f39!important;
+}
+
+/* AuriBoost Light Mode: industry-card content surface. */
+html[data-theme="light"] .oak-site .who-we-help-industry-card {
+  background:#0c1f39!important;
+}
+
+/* AuriBoost palette — requested Light Mode route treatment only. */
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) {
+  --auriboost-navy:#0c1f39;
+  --auriboost-teal:#14b7a5;
+  --auriboost-gold:#d3a12a;
+  --auriboost-white:#ffffff;
+  --auriboost-light-gray:#f7f9fc;
+  background:var(--auriboost-white)!important;
+  color:var(--auriboost-navy)!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is([class*="bg-[#F5F7FB]"],[class*="bg-[#EEF1FF]"],[class*="bg-[#EEF3FB]"]) {
+  background-color:var(--auriboost-light-gray)!important;
+  background-image:none!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is([class*="bg-gradient-to-br"][class*="from-[#151A2F]"],[class*="bg-gradient-to-b"][class*="from-[#151A2F]"],[class*="bg-gradient-to-br"][class*="from-[#0B55FF]"],[class*="bg-gradient-to-br"][class*="from-[#0C1220]"]) {
+  background:var(--auriboost-navy)!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is([class*="bg-[#0B55FF]"],[class*="bg-gradient-to-br"][class*="from-[#0B55FF]"]) {
+  background-color:var(--auriboost-teal)!important;
+  border-color:var(--auriboost-teal)!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is([class*="text-[#101832]"],[class*="text-[#5A6172]"],[class*="text-[#4B5568]"],[class*="text-[#3F495B]"],[class*="text-[#48536A]"]) {
+  color:var(--auriboost-navy)!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is([class*="text-[#0B55FF]"],[class*="text-[#8FA8FF]"],[class*="text-[#7C9CFF]"]) {
+  color:var(--auriboost-teal)!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is(em,[class*="text-[#7C35ED]"]) {
+  color:var(--auriboost-gold)!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is([class*="border-[#0B55FF]"],[class*="border-black"]) {
+  border-color:rgb(12 31 57 / 12%)!important;
+}
+
+/* Light Mode contrast guard for the AuriBoost routes. */
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is(h1,h2,h3,h4,h5,h6,p,li,label,legend,small,summary,dt,dd) {
+  color:var(--auriboost-navy)!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site:is(.route-contact,.route-our-process,.route-about-us,.route-functional-website,.route-who-we-help,.route-pricing) :is(
+  .who-we-help-industry-card,
+  .oak-layout-trades,
+  [class*="bg-gradient-to-br"][class*="from-[#151A2F]"],
+  [class*="bg-gradient-to-b"][class*="from-[#151A2F]"],
+  [class*="bg-gradient-to-br"][class*="from-[#0C1220]"],
+  [class*="bg-gradient-to-br"][class*="from-[#0B55FF]"]
+) :is(h1,h2,h3,h4,h5,h6,p,li,span,a,label,small) {
+  color:#ffffff!important;
+  opacity:1!important;
+}
+
+/* Light Mode navigation contrast. */
+html[data-theme="light"] .oak-site .oak-nav nav {
+  background:#ffffff!important;
+  border-color:rgb(12 31 57 / 12%)!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav nav > a img {
+  filter:none!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav :is(a,button) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav :is(a,button):hover {
+  color:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav a[href="/book-a-call"] {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav .theme-toggle {
+  background:#f7f9fc!important;
+  border-color:rgb(12 31 57 / 12%)!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav .theme-toggle button.active {
+  background:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav nav > div.absolute {
+  background:#ffffff!important;
+  border-color:rgb(12 31 57 / 12%)!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav nav > div.absolute :is(a,div,span) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site .oak-nav nav > div.absolute a:hover {
+  background:#f7f9fc!important;
+}
+
+/* Light Mode-only visibility fixes for the reported sections. */
+html[data-theme="light"] .oak-site.route-who-we-help .oak-nav + section [class*="-bottom-5"] {
+  background:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site.route-who-we-help .oak-nav + section [class*="-bottom-5"] :is(span,strong) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-who-we-help .who-fit > :is(span,h2) {
+  color:#ffffff!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-who-we-help .who-fit > div > div :is(h3,p,span) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-pricing .pricing-page > section:nth-of-type(2) > div.mt-8 :is(h3,p) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-who-we-help .who-fit > div > div,
+html[data-theme="light"] .oak-site.route-who-we-help .who-fit > div > div * {
+  color:#0c1f39!important;
+  -webkit-text-fill-color:#0c1f39!important;
+  opacity:1!important;
+}
+
+/* Subtle AuriBoost color treatment for the About approach section in Light Mode. */
+html[data-theme="light"] .oak-site.route-about-us .about-approach {
+  background:#f7f9fc!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:last-child > div {
+  background:#ffffff!important;
+  border:1px solid rgb(20 183 165 / 24%)!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child {
+  background:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child :is(h2,p) {
+  color:#ffffff!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child > div:first-child > span {
+  color:#14b7a5!important;
+}
+
+/* Final Light Mode treatment: About — “How we think” only. */
+html[data-theme="light"] .oak-site.route-about-us .about-approach {
+  background:#f7f9fc!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child {
+  align-items:center!important;
+  gap:clamp(1.5rem,4vw,3rem)!important;
+  padding:clamp(1.5rem,4vw,3rem)!important;
+  background:#f7f9fc!important;
+  border:0!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child :is(h2,p) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child > div:first-child > span {
+  color:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:last-child > div {
+  display:flex!important;
+  min-height:100%!important;
+  flex-direction:column!important;
+  background:#ffffff!important;
+  border:1px solid rgb(20 183 165 / 26%)!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:last-child > div :is(h3,p) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:last-child > div > span {
+  color:#d3a12a!important;
+}
+
+/* Keep the About intro row vertically balanced in Dark Mode as well. */
+html[data-theme="dark"] .oak-site.route-about-us .about-approach > div > div:first-child {
+  align-items:center!important;
+  gap:clamp(1.5rem,4vw,3rem)!important;
+  padding:clamp(1.5rem,4vw,3rem)!important;
+}
+
+/* Light Mode-only teal surfaces for the About approach containers. */
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child {
+  background:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:last-child > div {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:first-child > div:first-child > span {
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site.route-about-us .about-approach > div > div:last-child > div > span {
+  color:#0c1f39!important;
+}
+
+/* Let the gaps between About approach cards inherit the section background. */
+html[data-theme] .oak-site.route-about-us .about-approach > div > div:last-child {
+  background:transparent!important;
+}
+
+/* AuriBoost palette for the dashboard sign-in page — Light Mode only. */
+html[data-theme="light"] .oak-site.route-dashboard .client-portal {
+  background:#f7f9fc!important;
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-header {
+  background:#ffffff!important;
+  border-color:rgb(12 31 57 / 12%)!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard :is(.portal-brand,.portal-label,.portal-intro h1,.portal-intro > p,.portal-login h2,.portal-login label,.portal-copy) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard :is(.portal-intro > span,.portal-overline,.portal-forgot) {
+  color:#14b7a5!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-points {
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-points i {
+  background:#d3a12a!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-login {
+  background:#ffffff!important;
+  border-color:rgb(12 31 57 / 14%)!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard :is(.portal-mark,.portal-login-mark,.portal-submit) {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-field {
+  background:#ffffff!important;
+  border-color:rgb(12 31 57 / 18%)!important;
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard :is(.portal-field input,.portal-field button,.portal-field svg) {
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-field input::placeholder {
+  color:rgb(12 31 57 / 62%)!important;
+}
+
+html[data-theme="light"] .oak-site.route-dashboard .portal-login .portal-login-mark {
+  background:#14b7a5!important;
+  color:#ffffff!important;
+  box-shadow:0 8px 20px rgb(20 183 165 / 28%)!important;
+}
+
+/* AuriBoost Light Mode palette for the process steps section. */
+html[data-theme="light"] .oak-site .oak-layout-process {
+  background:#f7f9fc!important;
+  border-color:rgb(20 183 165 / 24%)!important;
+}
+
+html[data-theme="light"] .oak-site .oak-layout-process > span {
+  color:#14b7a5!important;
+  border-color:rgb(20 183 165 / 38%)!important;
+}
+
+html[data-theme="light"] .oak-site .oak-layout-process :is(h2,h3,p) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site .oak-layout-process > div > div {
+  background:#ffffff!important;
+  border-color:rgb(20 183 165 / 38%)!important;
+}
+
+html[data-theme="light"] .oak-site .oak-layout-process > div > div > div:first-child {
+  background:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site .oak-layout-process > div > div > div:nth-child(2) > span:first-child {
+  background:#d3a12a!important;
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site .oak-layout-process > div > div > div:nth-child(2) > span:last-child {
+  background:#f7f9fc!important;
+  color:#0c1f39!important;
+}
+
+/* Final AuriBoost Light Mode palette normalization. */
+html[data-theme="light"] {
+  --background:#ffffff;
+  --foreground:#0c1f39;
+  --color-navy:#0c1f39;
+  --color-blue:#14b7a5;
+  --color-purple:#d3a12a;
+  --color-muted:#0c1f39;
+}
+
+html[data-theme="light"] :is(body,.oak-layout,.oak-site) {
+  background:#ffffff!important;
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site :is(main,footer,.pricing-page,.service-page,.about-approach,.client-portal) {
+  background:#ffffff!important;
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site :is(h1,h2,h3,h4,h5,h6,p,li,label,legend,small,summary,dt,dd,input,textarea,select) {
+  color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site :is(a:not([href="/book-a-call"]),.portal-forgot) {
+  color:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  .oak-layout-feature,
+  .oak-layout-process > div > div,
+  .oak-layout-why > div > div,
+  .oak-layout-faq > div > div,
+  .pricing-page > section > div > div,
+  .service-page > section > div > div,
+  .about-summary-card,
+  .portal-login,
+  .booking-dialog,
+  .oak-dialog,
+  .oak-layout-proof figure
+) {
+  background:#ffffff!important;
+  border-color:rgb(20 183 165 / 26%)!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  .oak-layout-process,
+  .oak-layout-why,
+  .oak-layout-partners,
+  .oak-layout-faq,
+  .oak-layout-proof,
+  .service-page > section:nth-of-type(2),
+  .pricing-page > section:nth-of-type(2)
+) {
+  background:#f7f9fc!important;
+  border-color:rgb(20 183 165 / 20%)!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  .oak-layout-trades,
+  .oak-layout-cta > div,
+  .who-fit,
+  [class*="bg-gradient-to-br"][class*="from-[#151A2F]"],
+  [class*="bg-gradient-to-b"][class*="from-[#151A2F]"],
+  [class*="bg-gradient-to-br"][class*="from-[#0C1220]"]
+) {
+  background:#0c1f39!important;
+  border-color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  .oak-layout-trades,
+  .oak-layout-cta > div,
+  .who-fit,
+  [class*="bg-gradient-to-br"][class*="from-[#151A2F]"],
+  [class*="bg-gradient-to-b"][class*="from-[#151A2F]"],
+  [class*="bg-gradient-to-br"][class*="from-[#0C1220]"]
+) :is(h1,h2,h3,h4,h5,h6,p,li,span,a,label,small) {
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  a[href="/book-a-call"],
+  .demo-launch,
+  .portal-submit,
+  .booking-submit,
+  button[class*="bg-"]
+) {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  a[href="/book-a-call"],
+  .demo-launch,
+  .portal-submit,
+  .booking-submit,
+  button[class*="bg-"]
+) * {
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  [class*="text-[#0B55FF]"],
+  [class*="text-[#8FA8FF]"],
+  [class*="text-[#7C9CFF]"]
+) {
+  color:#14b7a5!important;
+}
+
+html[data-theme="light"] .oak-site :is(
+  [class*="text-[#7C35ED]"],
+  [class*="text-[#FFB81C]"]
+) {
+  color:#d3a12a!important;
+}
+
+html[data-theme="light"] .oak-site :is(input,textarea,select,.portal-field) {
+  background:#ffffff!important;
+  border-color:rgb(20 183 165 / 32%)!important;
+  color:#0c1f39!important;
+}
+
+html[data-theme="light"] .oak-site.route-who-we-help .who-fit > div > div :is(h3,p,span) {
+  color:#0c1f39!important;
+  -webkit-text-fill-color:#0c1f39!important;
+  opacity:1!important;
+}
+
+/* Deep Navy footer in Light Mode. */
+html[data-theme="light"] .oak-site footer {
+  background:#0c1f39!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site footer :is(p,li,div,a) {
+  color:#ffffff!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] .oak-site footer a[href="/book-a-call"] {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] .oak-site footer :is(.border-t,[class*="border-white"]) {
+  border-color:rgb(255 255 255 / 16%)!important;
+}
+
+html[data-theme="light"] footer.site-footer {
+  background:#0c1f39!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] footer.site-footer :is(p,li,div,a) {
+  color:#ffffff!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] footer.site-footer a[href="/book-a-call"] {
+  background:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] footer.site-footer img {
+  filter:none!important;
+}
+
+html[data-theme="light"] footer.site-footer :is(p,li a,.flex:last-child) {
+  color:#f7f9fc!important;
+}
+
+html[data-theme="light"] footer.site-footer > div:first-child > div:not(:first-child) > div:first-child {
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] footer.site-footer a[href="/book-a-call"] {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  box-shadow:0 12px 24px rgb(20 183 165 / 28%)!important;
+}
+
+/* Light Mode footer restoration — AuriBoost dark teal only. */
+html[data-theme="light"] body footer.site-footer {
+  background:#0c1f39!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] body footer.site-footer :is(h1,h2,h3,h4,h5,h6,p,li,div,a,span) {
+  color:#ffffff!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] body footer.site-footer a:hover {
+  color:#d3a12a!important;
+}
+
+html[data-theme="light"] body footer.site-footer a[href="/book-a-call"] {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] body footer.site-footer :is(.border-t,[class*="border-white"]) {
+  border-color:rgb(255 255 255 / 24%)!important;
+}
+
+html[data-theme="light"] body .oak-site footer.site-footer {
+  background-color:#0c1f39!important;
+  background-image:none!important;
+}
+
+html[data-theme="light"] body .oak-site footer.site-footer a[href="/book-a-call"] {
+  background:#14b7a5!important;
+  border-color:#14b7a5!important;
+  color:#ffffff!important;
+}
+
+html[data-theme="light"] body .oak-site footer.site-footer img {
+  filter:none!important;
+}
+
+html[data-theme="light"] body .oak-site.route-who-we-help .who-we-help-industry-card {
+  background:#0c1f39!important;
+  background-image:none!important;
 }

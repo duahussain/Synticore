@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "About Synticore | Business Systems Company",
+  title: "About AuriBoost | AI Front Desk Platform",
 };
 
 const systemItems = [
@@ -40,14 +40,14 @@ export default function AboutUs() {
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-12 px-6 pt-16 md:grid-cols-[1.3fr_1fr] md:px-10">
           <div>
             <span className="about-eyebrow inline-block rounded-full border border-[#0B55FF]/20 bg-white px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-[#0B55FF]">
-              About Synticore
+              About AuriBoost
             </span>
             <h1 className="mt-5 text-[40px] font-extrabold leading-[1.08] text-[#101832] sm:text-[48px] lg:text-[56px]">
               We improve the systems behind{" "}
               <em className="not-italic italic text-[#7C35ED]">everyday work.</em>
             </h1>
             <p className="mt-5 max-w-lg text-[17px] font-medium leading-relaxed text-[#5A6172]">
-              Synticore is a business-systems company focused on practical operational improvement
+              AuriBoost is an AI front desk platform built to answer every call, text, and chat while your business stays focused on customers.
               across workflow automation, Microsoft technologies, custom software, and product design.
             </p>
             <div className="about-actions mt-8 flex flex-wrap items-center gap-6">
@@ -68,14 +68,14 @@ export default function AboutUs() {
 
           <div className="about-summary-card rounded-[24px] bg-white p-7 shadow-[0_20px_50px_rgba(16,24,50,0.1)]">
             <Image
-              src="/assets/syntidesk-logo.jpg"
+              src="/assets/auriboost-logo.jpeg"
               alt=""
               width={44}
               height={44}
               className="h-11 w-11 rounded-2xl bg-[#EEF1FF] object-contain p-2"
             />
             <div className="mt-5 text-[13px] font-extrabold uppercase tracking-wide text-[#8A90A0]">
-              The Synticore approach
+              The AuriBoost approach
             </div>
             <ul className="mt-3 divide-y divide-black/5">
               {systemItems.map((item) => (
@@ -158,7 +158,7 @@ export default function AboutUs() {
                 Start Free Workflow Check <ChevronRight size={18} />
               </a>
               <div className="text-[13.5px] text-white/50">
-                Prefer to talk to Synticore?
+                Prefer to talk to AuriBoost?
                 <br />
                 <span className="font-bold text-white/80">
                   Review the workflow before choosing the technology.

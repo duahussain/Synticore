@@ -16,12 +16,12 @@ const columns = [
     links: [
       { label: "Our Process", href: "/our-process" },
       { label: "Industries", href: "/who-we-help" },
-      { label: "Why Synticore", href: "/about-us" },
+      { label: "Why AuriBoost", href: "/about-us" },
       { label: "FAQs", href: "/#faq" },
     ],
   },
   {
-    title: "SyntiDesk",
+    title: "AuriBoost",
     links: [
       { label: "Interactions", href: "/dashboard" },
       { label: "Appointments", href: "/dashboard" },
@@ -33,25 +33,24 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0C1220] px-6 pt-20 md:px-10">
+    <footer className="site-footer bg-[#0C1220] px-6 pt-20 md:px-10">
       <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-12 pb-14 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <Image
-            src="/assets/syntidesk-logo.jpg"
-            alt="SyntiDesk"
+            src="/assets/auriboost-logo.jpeg"
+            alt="AuriBoost"
             width={160}
             height={36}
             className="h-8 w-auto"
           />
           <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-white/60">
-            Business systems for practical operational improvement across workflow automation,
-            Microsoft technologies, AI, integrations, and custom software.
+            Your AI front desk for calls, texts, appointments, follow-up, and every lead that needs a response.
           </p>
           <a
             href="/book-a-call"
             className="mt-6 inline-flex items-center gap-1 rounded-[14px] bg-[#0B55FF] px-5 py-3 text-[14.5px] font-extrabold text-white hover:bg-[#0a49dd]"
           >
-            Start Free Workflow Check <ChevronRight size={16} />
+            Book a Demo <ChevronRight size={16} />
           </a>
         </div>
 
@@ -72,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto flex max-w-[1120px] flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-[13.5px] text-white/50 sm:flex-row">
-        <div>&copy; 2026 Synticore. All rights reserved.</div>
+        <div>&copy; 2026 AuriBoost. All rights reserved.</div>
         <div className="flex gap-6">
           <a href="/privacy-policy" className="hover:text-white">
             Privacy

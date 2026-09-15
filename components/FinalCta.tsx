@@ -27,13 +27,13 @@ export default function FinalCta() {
 
         <div className="flex flex-col items-center justify-center rounded-2xl bg-white/5 p-8 text-center">
           <Image
-            src="/assets/syntidesk-logo.jpg"
+            src="/assets/auriboost-logo.jpeg"
             alt=""
             width={44}
             height={44}
             className="h-11 w-11 object-contain"
           />
-          <div className="mt-4 text-[26px] font-extrabold text-white">SyntiDesk</div>
+          <div className="mt-4 text-[26px] font-extrabold text-white">AuriBoost</div>
           <div className="text-[14.5px] text-white/60">AI &amp; Customer Operations</div>
         </div>
       </div>

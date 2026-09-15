@@ -37,7 +37,7 @@ export default function WhyChoose() {
   return (
     <section className="oak-layout-why mx-auto max-w-[1120px] px-6 py-20 text-center md:px-10">
       <h2 className="text-[32px] font-extrabold leading-[1.08] text-[#101832] sm:text-[40px] lg:text-[45.84px]">
-        How Synticore thinks
+        How AuriBoost works
         <br />
         about operational improvement
       </h2>

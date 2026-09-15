@@ -36,7 +36,7 @@ const solutionsColumns = [
     items: [
       { icon: Layout, title: "Workflow Automation", desc: "Keep routine work moving", href: "/functional-website" },
       { icon: MessageSquare, title: "Microsoft Business Solutions", desc: "Make Microsoft tools work together", href: "/ai-chat-agent" },
-      { icon: Star, title: "AI & Customer Operations", desc: "SyntiDesk lives here", href: "/review-funnel" },
+      { icon: Star, title: "AI Reception & Customer Operations", desc: "AuriBoost lives here", href: "/review-funnel" },
       { icon: RefreshCcw, title: "Custom Business Systems", desc: "Build around the process", href: "/automated-follow-up" },
       { icon: Inbox, title: "Integrations", desc: "Connect the systems you use", href: "/all-in-one-inbox" },
     ],
@@ -53,10 +53,10 @@ const solutionsColumns = [
   {
     title: "Company",
     items: [
-      { icon: MessageCircle, title: "About Synticore", desc: "Business systems company", href: "/about-us" },
+      { icon: MessageCircle, title: "About AuriBoost", desc: "AI front desk platform", href: "/about-us" },
       { icon: Share2, title: "Our Approach", desc: "Process before technology", href: "/our-process" },
       { icon: ThumbsUp, title: "Industries Served", desc: "Where operational friction lives", href: "/who-we-help" },
-      { icon: Megaphone, title: "Workflow Efficiency Check", desc: "Start with the business problem", href: "/book-a-call" },
+      { icon: Megaphone, title: "Book a Demo", desc: "See AuriBoost in action", href: "/book-a-call" },
     ],
   },
 ];
@@ -110,10 +110,10 @@ export default function Navbar() {
         className="relative flex h-[64px] items-center justify-between gap-3 rounded-[18px] border border-black/5 bg-white/90 pl-4 pr-3 shadow-[0_8px_30px_rgba(16,24,50,0.08)] backdrop-blur sm:h-[76px] sm:gap-4 sm:rounded-[22px] sm:pl-[30px] sm:pr-6"
         onMouseLeave={() => setOpenMenu(null)}
       >
-        <Link href="/" aria-label="Synticore home" className="flex items-center gap-2 shrink-0">
+        <Link href="/" aria-label="AuriBoost home" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/assets/syntidesk-logo.jpg"
-            alt="SyntiDesk"
+            src="/assets/auriboost-logo.jpeg"
+            alt="AuriBoost"
             width={230}
             height={47}
             className="h-[30px] w-auto sm:h-[40px] lg:h-[47px]"
@@ -132,7 +132,7 @@ export default function Navbar() {
             Industries
           </a>
           <a href="/pricing" className="text-[15.5px] font-semibold text-[#5A6172] hover:text-[#101832]">
-            SyntiDesk
+            AuriBoost
           </a>
           <button
             className="flex items-center gap-1 text-[15.5px] font-semibold text-[#5A6172] hover:text-[#101832]"
@@ -151,13 +151,13 @@ export default function Navbar() {
             href="tel:+18888100013"
             className="hidden text-[15.5px] font-semibold text-[#0B55FF] md:block"
           >
-            Talk to Synticore
+            Talk to AuriBoost
           </a>
           <a
             href="/book-a-call"
             className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-[14px] bg-[#0B55FF] px-4 py-2.5 text-[14px] font-extrabold text-white shadow-[0_10px_20px_rgba(11,85,255,0.25)] hover:bg-[#0a49dd] sm:px-5 sm:text-[15px]"
           >
-            Workflow Check <ChevronRight size={16} />
+            Book a Demo <ChevronRight size={16} />
           </a>
           <a href="/dashboard" className="hidden text-[15.5px] font-semibold text-[#5A6172] sm:block">
             Login
@@ -239,14 +239,14 @@ export default function Navbar() {
                 Industries
               </a>
               <a href="/pricing" className="rounded-lg px-3 py-2.5 text-[15px] font-semibold text-[#101832] hover:bg-[#F5F7FB]">
-                SyntiDesk
+                AuriBoost
               </a>
               <a href="/about-us" className="rounded-lg px-3 py-2.5 text-[15px] font-semibold text-[#101832] hover:bg-[#F5F7FB]">
                 About
               </a>
               <div className="mt-2 border-t border-black/5 pt-3">
                 <a href="tel:+18888100013" className="block px-3 py-2 text-[15px] font-semibold text-[#0B55FF]">
-                  Talk to Synticore
+                  Talk to AuriBoost
                 </a>
                 <a href="/dashboard" className="block px-3 py-2 text-[15px] font-semibold text-[#5A6172]">
                   Login

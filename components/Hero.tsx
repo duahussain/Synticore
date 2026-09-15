@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Check, ChevronRight } from "lucide-react";
 
 const bullets = [
-  "Process-first operational improvement",
-  "Automation, Microsoft tools, AI, and custom systems",
-  "People stay involved where judgment matters",
+  "Answers calls and website chats 24/7",
+  "Books appointments and captures qualified leads",
+  "Texts back missed calls in seconds",
 ];
 
 export default function Hero() {
@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="absolute inset-0">
         <Image
           src="/assets/syntidesk/overview-poster.jpg"
-          alt="SyntiDesk product overview"
+          alt="AuriBoost product overview"
           fill
           priority
           className="object-cover object-center"
@@ -24,12 +24,11 @@ export default function Hero() {
         <div className="relative min-h-[607px] px-6 md:px-[112px]">
         <div className="max-w-[660px]">
           <h1 className="text-[36px] font-extrabold leading-[1.1] tracking-[-0.02em] text-[#101832] sm:text-[44px] lg:text-[54px]">
-            We improve the systems behind{" "}
-            <em className="not-italic italic text-[#7C35ED]">everyday work.</em>
+            Never miss{" "}
+            <em className="not-italic italic text-[#7C35ED]">another lead.</em>
           </h1>
           <p className="mt-5 max-w-[460px] text-[16px] font-bold leading-[1.55] text-[#566073] sm:text-[17.5px]">
-            Synticore helps organizations simplify operations, connect systems, and introduce
-            automation where it delivers practical value.
+            AuriBoost answers calls, follows up by text, books appointments, and helps growing businesses turn more inquiries into customers.
           </p>
 
           <ul className="hero-checklist mt-6 space-y-3">
@@ -49,19 +48,19 @@ export default function Hero() {
             href="/book-a-call"
             className="mt-7 inline-flex h-[58px] min-w-[196px] items-center justify-center gap-1 rounded-[14px] bg-[#0B55FF] px-6 text-[17px] font-extrabold text-white shadow-[0_14px_28px_rgba(11,85,255,0.3)] hover:bg-[#0a49dd] sm:text-[18px]"
           >
-            Start Free Workflow Check <ChevronRight size={18} />
+            Book a Demo <ChevronRight size={18} />
           </a>
 
           <div className="hero-ratings mt-8 flex flex-wrap items-center gap-6">
-            <RatingBadge src="/assets/syntidesk-logo.jpg" name="SyntiDesk" />
+            <RatingBadge src="/assets/auriboost-logo.jpeg" name="AuriBoost" />
           </div>
           </div>
         </div>
 
-        <div className="hero-synticore-brand" aria-label="Synticore">
+        <div className="hero-synticore-brand" aria-label="AuriBoost">
           <Image
-            src="/assets/synticore-logo.png"
-            alt="Synticore"
+            src="/assets/auriboost-logo.jpeg"
+            alt="AuriBoost"
             width={1383}
             height={260}
           />

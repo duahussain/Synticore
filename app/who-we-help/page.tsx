@@ -152,7 +152,7 @@ export default function WhoWeHelp() {
           {categories.map((c) => (
             <div
               key={c.title}
-              className="overflow-hidden rounded-[20px] border border-black/5 bg-white shadow-[0_10px_30px_rgba(16,24,50,0.05)]"
+              className="who-we-help-industry-card overflow-hidden rounded-[20px] border border-black/5 bg-white shadow-[0_10px_30px_rgba(16,24,50,0.05)]"
             >
               <div className="relative h-[180px] w-full">
                 <Image src={`/assets/trades/${c.img}.jpg`} alt={c.title} fill className="object-cover" />

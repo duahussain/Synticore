@@ -3,9 +3,9 @@ import "./globals.css";
 import { SiteFrame } from "@/components/Interactions";
 
 export const metadata: Metadata = {
-  title: "Contractor Website & Marketing System | Oakmont Digital",
+  title: "AuriBoost | AI Receptionist, Booking & Lead Follow-up",
   description:
-    "Oakmont builds contractor websites and marketing systems that capture leads, follow up faster, improve reviews, and help book more local work.",
+    "AuriBoost is an AI front desk that answers calls and chats, books appointments, and follows up with every lead.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
