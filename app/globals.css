@@ -3543,3 +3543,23 @@ html[data-theme="light"] body .oak-site .oak-layout-why > div > div:first-child 
   -webkit-text-fill-color:#ffffff!important;
   opacity:1!important;
 }
+
+/* Keep the Trades CTA teal in Light Mode, regardless of system color preference. */
+html[data-theme="light"] body .oak-site .trades-explore-cta {
+  background:#14b7a5!important;
+  box-shadow:0 14px 28px rgb(20 183 165 / 30%)!important;
+}
+
+html[data-theme="light"] body .oak-site .trades-explore-cta:hover {
+  background:#0fa896!important;
+}
+
+/* Dark Mode-only hero CTA color. */
+html[data-theme="dark"] .oak-site.oak-site.route-home .home-hero a.hero-book-demo {
+  background:#d45145!important;
+  box-shadow:0 14px 28px rgb(212 81 69 / 30%)!important;
+}
+
+html[data-theme="dark"] .oak-site.oak-site.route-home .home-hero a.hero-book-demo:hover {
+  background:#c5443a!important;
+}

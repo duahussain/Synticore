@@ -46,7 +46,7 @@ export default function Hero() {
 
           <a
             href="/book-a-call"
-            className="mt-7 inline-flex h-[58px] min-w-[196px] items-center justify-center gap-1 rounded-[14px] bg-[#0B55FF] px-6 text-[17px] font-extrabold text-white shadow-[0_14px_28px_rgba(11,85,255,0.3)] hover:bg-[#0a49dd] sm:text-[18px]"
+            className="hero-book-demo mt-7 inline-flex h-[58px] min-w-[196px] items-center justify-center gap-1 rounded-[14px] bg-[#0B55FF] px-6 text-[17px] font-extrabold text-white shadow-[0_14px_28px_rgba(11,85,255,0.3)] hover:bg-[#0a49dd] sm:text-[18px]"
           >
             Book a Demo <ChevronRight size={18} />
           </a>

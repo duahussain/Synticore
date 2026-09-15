@@ -122,7 +122,7 @@ export default function TradesBand() {
         </div>
         <a
           href="/who-we-help#trades"
-          className="mt-10 inline-flex items-center gap-1 rounded-[14px] bg-[#0B55FF] px-6 py-3.5 text-[15.5px] font-extrabold text-white shadow-[0_14px_28px_rgba(11,85,255,0.3)] hover:bg-[#0a49dd]"
+          className="trades-explore-cta mt-10 inline-flex items-center gap-1 rounded-[14px] bg-[#14B7A5] px-6 py-3.5 text-[15.5px] font-extrabold text-white shadow-[0_14px_28px_rgba(20,183,165,0.3)] hover:bg-[#0fa896] dark:bg-[#0B55FF] dark:shadow-[0_14px_28px_rgba(11,85,255,0.3)] dark:hover:bg-[#0a49dd]"
         >
           Explore AuriBoost Solutions <ChevronRight size={18} />
         </a>
