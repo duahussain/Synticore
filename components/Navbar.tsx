@@ -7,19 +7,11 @@ import { useState } from "react";
 import {
   ChevronDown,
   ChevronRight,
-  Layout,
-  MessageSquare,
   Star,
-  RefreshCcw,
   Inbox,
   PhoneMissed,
   Search,
-  Repeat,
   Smartphone,
-  MessageCircle,
-  Share2,
-  ThumbsUp,
-  Megaphone,
   Music2,
   PhoneCall,
   Video,
@@ -34,29 +26,16 @@ const solutionsColumns = [
   {
     title: "Solution Areas",
     items: [
-      { icon: Layout, title: "Workflow Automation", desc: "Keep routine work moving", href: "/functional-website" },
-      { icon: MessageSquare, title: "Microsoft Business Solutions", desc: "Make Microsoft tools work together", href: "/ai-chat-agent" },
-      { icon: Star, title: "AI Reception & Customer Operations", desc: "AuriBoost lives here", href: "/review-funnel" },
-      { icon: RefreshCcw, title: "Custom Business Systems", desc: "Build around the process", href: "/automated-follow-up" },
+      { icon: Star, title: "AI Reception", desc: "AuriBoost lives here", href: "/review-funnel" },
       { icon: Inbox, title: "Integrations", desc: "Connect the systems you use", href: "/all-in-one-inbox" },
     ],
   },
   {
     title: "Services",
     items: [
-      { icon: PhoneMissed, title: "AI Receptionist & Voice Agents", desc: "Calls, appointments, and routing", href: "/missed-call-text-back" },
-      { icon: Search, title: "CRM & Sales Automation", desc: "Follow-up and handoffs", href: "/local-seo" },
-      { icon: Repeat, title: "Microsoft 365 Workflows", desc: "SharePoint and Power Platform", href: "/one-click-campaigns" },
+      { icon: PhoneMissed, title: "AI Receptionist", desc: "Calls, appointments, and routing", href: "/missed-call-text-back" },
+      { icon: Search, title: "CRM and Sales Automation", desc: "Follow-up and handoffs", href: "/local-seo" },
       { icon: Smartphone, title: "Customer Support Automation", desc: "FAQs, routing, and handoffs", href: "/business-phone" },
-    ],
-  },
-  {
-    title: "Company",
-    items: [
-      { icon: MessageCircle, title: "About AuriBoost", desc: "AI front desk platform", href: "/about-us" },
-      { icon: Share2, title: "Our Approach", desc: "Process before technology", href: "/our-process" },
-      { icon: ThumbsUp, title: "Industries Served", desc: "Where operational friction lives", href: "/who-we-help" },
-      { icon: Megaphone, title: "Book a Demo", desc: "See AuriBoost in action", href: "/book-a-call" },
     ],
   },
 ];
@@ -173,10 +152,10 @@ export default function Navbar() {
 
         {openMenu === "solutions" && (
           <div
-            className="absolute left-0 top-[calc(100%+2px)] grid w-[min(920px,90vw)] grid-cols-1 gap-6 rounded-2xl border border-black/5 bg-white p-7 shadow-2xl md:grid-cols-3"
+            className="absolute left-0 top-[calc(100%+2px)] grid w-[min(660px,90vw)] grid-cols-1 gap-6 rounded-2xl border border-black/5 bg-white p-7 shadow-2xl md:grid-cols-2"
           >
             {solutionsColumns.map((col, ci) => (
-              <div key={ci} className={ci === 1 ? "md:border-l md:border-r md:px-6 border-black/5" : ""}>
+              <div key={ci} className={ci === 1 ? "md:border-l md:px-6 border-black/5" : ""}>
                 {col.title && (
                   <div className="mb-3 flex items-center gap-1 text-[15px] font-bold text-[#101832]">
                     {col.title} <ChevronRight size={14} className="text-[#0B55FF]" />

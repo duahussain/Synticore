@@ -3512,3 +3512,34 @@ html[data-theme="light"] body .oak-site.route-who-we-help .who-we-help-industry-
   background:#0c1f39!important;
   background-image:none!important;
 }
+
+html[data-theme="light"] body .oak-site.route-who-we-help .who-we-help-industry-card > div:last-child {
+  background:#0c1f39!important;
+  background-image:none!important;
+}
+
+/* Light Mode-only visibility for the Why and Partners introductions. */
+html[data-theme="light"] body .oak-site .oak-layout-why > div > :first-child :is(h1,h2,h3,h4,h5,h6,p,span),
+html[data-theme="light"] body .oak-site .oak-layout-partners > div > :first-child :is(h1,h2,h3,h4,h5,h6,p,span) {
+  color:#0c1f39!important;
+  -webkit-text-fill-color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] body .oak-site .oak-layout-why > h2 {
+  color:#0c1f39!important;
+  -webkit-text-fill-color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] body .oak-site .oak-layout-partners > div > h2 {
+  color:#0c1f39!important;
+  -webkit-text-fill-color:#0c1f39!important;
+  opacity:1!important;
+}
+
+html[data-theme="light"] body .oak-site .oak-layout-why > div > div:first-child :is(h3,p,span) {
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1!important;
+}

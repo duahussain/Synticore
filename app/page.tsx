@@ -131,24 +131,6 @@ export default function Home() {
             ]}
           />
 
-          <FeatureTextBlock
-            heading="Human Expert Implementation"
-            description="Real delivery and support from AI engineers, Microsoft 365 experts, developers, designers, and automation specialists."
-            items={[
-              {
-                title: "Review",
-                desc: "Understand users, workflow, systems, data, ownership, bottlenecks, and exceptions.",
-              },
-              {
-                title: "Build / Connect",
-                desc: "Implement the right combination of automation, Microsoft tools, integrations, AI, or custom systems.",
-              },
-              {
-                title: "Support",
-                desc: "Test, document, train, monitor, and improve the system over time.",
-              },
-            ]}
-          />
         </ScrollFrameAnimation>
       </section>
 
